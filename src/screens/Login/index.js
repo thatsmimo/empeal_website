@@ -1,7 +1,19 @@
 import React from "react";
+import { Button, Container, Row } from "react-bootstrap";
 
 function Login() {
-  return <h1>Login page</h1>;
+  return (
+    <div>
+      <Container>
+        <Row>
+          <input className="text-box" placeholder="jaskd" />
+          <Button className="new-btn" variant="primary">
+            Primary
+          </Button>
+        </Row>
+      </Container>
+    </div>
+  );
 }
 
 export default Login;
