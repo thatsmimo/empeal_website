@@ -8,7 +8,7 @@ import Homepage from "../screens/Homepage";
 export default function MainRouter() {
   return (
     <Switch>
-      <Route exact path="/" component={Dashboard}></Route>
+      <Route exact path="/" component={Homepage}></Route>
       <Route exact path="/about" component={AboutUs}></Route>
       <Route exact path="/login" component={Login}></Route>
       <Route exact path="/home" component={Homepage}></Route>
