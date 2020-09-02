@@ -14,6 +14,12 @@ const Assets = {
         trophy1 : require('../assets/images/trophy.png'),
         companyAward1 : require('../assets/images/company-award-1.png'),
         hill : require('../assets/images/hill.png'),
+        newsIcon : require('../assets/images/news-icon.png'),
+        blogIcon : require('../assets/images/blog.png'),
+        poscastIcon : require('../assets/images/podcast.png'),
+        interviewIcon : require('../assets/images/interview.png'),
+        boyHoping : require('../assets/images/boy_hoping.png'),
+        girlCycle : require('../assets/images/girl-with-cycle.png'),
     }
 }
 
