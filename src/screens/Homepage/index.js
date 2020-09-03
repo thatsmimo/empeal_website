@@ -328,6 +328,7 @@ export default class index extends React.Component {
                       </div>
                       {/* Col : End */}
                       {/* Col : Begin */}
+
                       <div className="_fCol">
                         <Form.Group controlId="formBasicCheckbox">
                           <label className="_fLabel">
@@ -342,7 +343,7 @@ export default class index extends React.Component {
                                   />
                                 </span>
                                 <span className="_checkDiv-txt">
-                                  Organisation
+                                  Organisation  lkjhjfgfffffffffdddddddddddddddd
                                 </span>
                               </span>
                             </span>
