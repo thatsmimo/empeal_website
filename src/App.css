@@ -48,7 +48,13 @@ p {
   margin-bottom: 20px;
   color: #2a333b;
 }
-
+ul, li{
+  padding: 0;
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
 /*************** Colors ***********/
 ._white {
   color: #fff !important;
@@ -86,7 +92,18 @@ p {
 ._mB-0 {
   margin-bottom: 0 !important;
 }
-
+._mB-15 {
+  margin-bottom: 15px !important;
+}
+._mB-30 {
+  margin-bottom: 30px !important;
+}
+._mB-45 {
+  margin-bottom: 45px !important;
+}
+._mB-60 {
+  margin-bottom: 60px !important;
+}
 /*** Font Weight ****/
 ._fW-300 {
   font-weight: 300 !important;
@@ -96,7 +113,21 @@ p {
 }
 /*************** Titles ***********/
 ._titleDiv {
-  margin-bottom: 45px;
+  margin-bottom: 60px;
+  position: relative;
+}
+/* ._absIcon {
+  display: inline-block;
+  position: absolute;
+} */
+._title{
+  position: relative;
+}
+._title ._absIcon{
+ position: relative;
+ display: inline-block;
+ padding-right: 25px;
+
 }
 ._title {
   color: #31567c;
@@ -132,18 +163,32 @@ p {
   background-color: #333333;
   border-radius: 5px;
   color: #fff;
-  min-width: 155px;
+  min-width: 175px;
   height: 50px;
   text-align: center;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 28px;
+  position: relative;
+  transition: all 0.5s;
 }
 ._appBtn:hover {
   color: #fff;
+  text-decoration: none;
+  background-color: #29abe2;
+ 
 }
 ._appBtn:not(:last-child) {
   margin-right: 10px;
+}
+._appBtn span{
+  position: relative;
+  top: -3px;
+  padding-right: 3px;
+}
+
+._appBtn span img{ 
+  width: 16px;
 }
 ._btn,
 ._btn-green {
@@ -163,6 +208,10 @@ p {
   font-weight: 500;
   transition: all 0.4s;
 }
+._btnCustom-2:hover{
+  background-color: #9bd025 !important;
+  border: 1px solid #9bd025 !important;
+}
 ._btnCustom-3 {
   height: 45px;
   min-width: 145px;
@@ -174,6 +223,10 @@ p {
   line-height: 30px !important;
   font-weight: 500;
   transition: all 0.4s;
+}
+._btnCustom-3:hover{
+  background-color: #29abe2 !important;
+  border: 1px solid #29abe2 !important;
 }
 ._btnCustom-4 {
   height: 45px;
@@ -225,7 +278,7 @@ Header Section
 Banner Section
 *************************/
 ._bannerOutter {
-  background-image: url("../src/assets/images/banner-bg.png");
+  background-image: url("../src/assets/images/banner-bg.svg");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 50%;
@@ -307,8 +360,8 @@ Banner Section
   width: 165px;
 }
 ._banner-bottom {
-  background: url(../src/assets/images/people.png) no-repeat right 100%;
-  background-size: 18%;
+  background: url(../src/assets/images/people-2.png) no-repeat 90% 70%;
+  background-size: 12%;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -324,22 +377,25 @@ Banner Section
   position: relative;
 }
 ._iconHolder {
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   background-color: #fff;
   display: inline-flex;
   border-radius: 100%;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.16);
+  padding: 15px;
 }
-
+._iconImg{
+  max-width: 100%;
+}
 ._customListGrp-1 .list-group-item ._iconHolder {
   position: absolute;
   top: -8px;
 }
 ._customListGrp-1 .list-group-item ._iconHolder ~ ._listCont {
-  padding-left: 70px;
+  padding-left: 80px;
 }
 
 ._listCont ._title-4 {
@@ -402,7 +458,8 @@ About Section
 About You Section
 *************************/
 ._aboutYouSection {
-  padding-bottom: 200px;
+  padding-top: 80px;
+  padding-bottom: 150px;
   position: relative;
 }
 ._hillDiv {
@@ -412,6 +469,9 @@ About You Section
 }
 ._hillDiv img {
   width: 100%;
+}
+._hillDiv-2 img{
+  width: auto
 }
 ._aboutMainDiv {
   position: relative;
@@ -506,12 +566,44 @@ About You Section
   background-color: #29abe2;
 }
 ._customBtn-1 {
-  height: 55px;
+  height: 50px;
   min-width: 160px;
   border-radius: 35px !important;
   font-size: 18px !important;
   background-color: #29abe2 !important;
   border-color: #29abe2 !important;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  line-height: 30px;
+  text-align: center;
+}
+._customBtn-1:hover{
+  background-color: #9bd025 !important;
+  border-color: #9bd025 !important;
+}
+._customBtn-2 {
+  height: 50px;
+  min-width: 160px;
+  border-radius: 35px !important;
+  font-size: 18px !important;
+  background-color: #9bd025 !important;
+  border-color: #9bd025 !important;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 25px;
+  line-height: 30px;
+  text-align: center;
+}
+._customBtn-2:hover{
+  background-color: #29abe2 !important;
+  border-color: #29abe2 !important;
+}
+._customBtn-1:hover, ._customBtn-2:hover{
+  color: #fff;
+  text-decoration: none;
 }
 .inactive {
   background-color: #ced6e9 !important;
@@ -559,6 +651,7 @@ Your Story Section
   position: relative;
   padding-right: 80px;
   justify-content: flex-end;
+  min-height: 45px;
 }
 ._navDiv ._navIcon {
   position: absolute;
@@ -571,6 +664,7 @@ Your Story Section
 ._navDiv ._txt {
   font-size: 18px;
   font-weight: 600;
+  margin-bottom: 0;
 }
 .nav-link.active ._navIcon {
   background-color: #fff;
@@ -586,6 +680,17 @@ Your Story Section
 ._content {
   padding-left: 25px;
 }
+._content p{
+  margin-bottom: 20px;
+}
+._content ._btnCustom-2{
+  margin-top: 25px;
+}
+._contCat{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
 ._paneInner-row {
   align-items: center;
 }
@@ -593,13 +698,17 @@ Your Story Section
 /************************* 
 Helth Management Section
 *************************/
+._helthM-cont {
+  background: url(assets/images/graphic-bg-1.svg) #31567c no-repeat right center;
+  padding: 80px 0;
+}
 ._numCircle {
   display: inline-flex;
   padding: 15px;
   background-color: #9bd025;
   height: 150px;
   width: 150px;
-  font-size: 45px;
+  font-size: 55px;
   color: #fff;
   font-weight: 700;
   border-radius: 100%;
@@ -621,10 +730,26 @@ Testimonial Section
 *************************/
 ._testimonialSection {
   overflow: hidden;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+._testimonialSection-inner{
+  overflow: hidden;
+}
+._testimonialSection ._testColLeft {
+  position: absolute !important;
+  right: 0;
+  max-width: 55%;
+  padding-right: 0;
+  overflow: hidden;
 }
 ._testColLeft {
   /* position: absolute !important; */
   /* right: -127px; */
+}
+._testimonialSection ._testOutter {
+  display: block;
+  margin-right: -124px;
 }
 ._testDiv {
   background: #fff;
@@ -642,12 +767,12 @@ span._testImg {
   display: inline-flex;
   background: #edf4fc;
   border-radius: 100%;
-  padding: 10px;
+  padding: 5px;
   justify-content: center;
   align-items: center;
 }
 ._testImg img {
-  max-width: 30px;
+  max-width: 100%;
 }
 ._testBtmCont {
   position: relative;
@@ -669,7 +794,24 @@ span._testImg {
   line-height: 20px;
   margin-bottom: 2px;
 }
-
+._testimonialSection .owl-theme .owl-dots{
+  text-align: left;
+}
+._testimonialSection .owl-theme .owl-dots .owl-dot span{
+  background: #9b9b9b;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+}
+._testimonialSection .owl-theme .owl-dots .owl-dot.active span{
+  width: 10px;
+  height: 10px;
+  background: #29abe2;
+}
+.owl-theme .owl-dots .owl-dot:focus{
+  outline: none;
+  box-shadow: none;
+}
 /************************* 
 Blog Section
 *************************/
@@ -762,17 +904,17 @@ Up to Date Section
   position: absolute;
   left: 0;
   box-shadow: none;
-  padding: 10px;
-  display: inline-block;
+  padding: 10px; 
   text-align: center;
+ 
 }
 ._iconInfoDiv ._iconHolder img {
-  max-width: 25px;
-  max-height: 25px;
+  max-width: 30px;
+  max-height: 30px;
   margin: 0 auto;
 }
 ._iconInfoDiv ._iconHolder ~ ._listCont {
-  padding-left: 70px;
+  padding-left: 80px;
 }
 ._link {
   color: #29abe2;
@@ -791,11 +933,12 @@ Up to Date Section
 ._subsOutter {
   position: relative;
   background: #edf4fc;
-  padding: 100px 25px 65px 25px;
   border: 10px solid #ced6e9;
+  padding: 120px 25px 65px 25px; 
   border-radius: 10px;
   width: 315px;
   max-width: 100%;
+  /* background: url(assets/images/catchup-graphics.svg) no-repeat; */
 }
 ._boyHoping {
   display: inline-block;
@@ -803,8 +946,20 @@ Up to Date Section
   position: absolute;
   left: 15px;
 }
+._boyHoping img{
+  width: 200px
+}
 ._subsOutter ._title-1 {
   font-weight: 600;
+}
+._pin{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -27px;
+  display: inline-block;
+  width: 32px;
 }
 ._girlWithCycle {
   position: absolute;
@@ -812,7 +967,7 @@ Up to Date Section
   right: -40px;
 }
 ._girlWithCycle img {
-  height: 150px;
+  height: 175px;
 }
 
 ._takeQuiz ._numCircle {
@@ -872,11 +1027,330 @@ Up to Date Section
   border: 3px solid #fff;
   border-radius: 100%;
   padding: 7px;
+  transition: all 0.5s;
 }
 ._socialLinks li a img {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+._socialLinks li a:hover{
+  background-color: #61dafb;
+}
+._subTitleDiv{
+  position: relative;
+  padding-left: 50px;
+}
+._subTitleDiv ._back{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+._subTitleDiv ._back img{
+  max-height: 40px;
+}
+/* Radio Box */
+._radiobox-label{
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+}
+._radiobox-label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+._radiobox-label > ._rdSpan {
+  display: inline-block;
+  border: 3px solid #ced6e9;    
+  background-color: #fff;   
+  border-radius: 50%!important;
+  border-radius: 3px;            
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+}
+._radiobox-label > ._rdSpan:after {
+  position: absolute;
+  content: "";
+  border: solid #1ecfee;
+  background: #1ecfee;
+  top: 50%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: -5px;
+  height: 10px;
+  width: 10px;
+  border-radius: 100% !important;
+  transition: transform 0.5s;
+  transform: scale(0);
+}
+._radiobox-label > input:checked ~ ._rdSpan:after{
+  transform: scale(1);
+}
+/* Checkbox */
+._checkbox-label{
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+}
+._checkbox-label > input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+._checkbox-label > ._chSpan {        
+  border-radius: 3px;  
+  position: absolute;
+  top: 1px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 3px solid #ced6e9;
+  background-color: #fff;
+}       
+._checkbox-label > ._chSpan:after {
+  content: '';
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%; 
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);  
+  border: solid #31567c;
+  margin-left: -3px;
+  margin-top: -6px;
+  width: 7px;
+  height: 12px;
+  border-width: 0 3px 3px 0 !important;
+}
+._checkbox-label > input:checked ~ ._chSpan{
+  background-color: #29abe2;     
+}
+._checkbox-label > input:checked ~ ._chSpan:after {
+  display: block;           
+}
+
+._orgLists{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: center;
+}
+._orgLists:not(:last-child){
+  margin-bottom: 30px;
+}
+._orgList{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+._orgList ._checkbox-label{
+  color: #fff;
+  padding-left: 45px;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+._orgList ._checkbox-label > ._chSpan{
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  top: -2px;
+}
+
+._orgList ._checkbox-label > input:checked ~ ._chSpan{
+  background-color: #29abe2;   
+  border-color: #29abe2;  
+}
+._orgList ._checkbox-label > ._chSpan:after{
+  margin-left: -3px;
+  margin-top: -9px;
+  width: 8px;
+  height: 15px;
+}
+._lists{
+  padding: 0;
+}
+._lists li{
+  padding-bottom: 10px;
+  color: #fff;
+  list-style: none;  
+}
+._tickLists li{
+  font-size: 18px;
+  padding-left: 55px;
+  padding-bottom: 20px;
+  background-image: url(/static/media/table-tick.d085d86d.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+._lapMobBox {
+  position: relative;
+}
+._lapMobBox ._absImg{
+  display: inline-block;
+  position: absolute;
+  left: 85px;
+  top: 65%;
+}
+/********* Switch 3 **********/
+._bA-div{
+  display: flex;
+  align-items: center;
+}
+._bA-div p{
+  padding-right: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.can-toggle {
+  position: relative;
+}
+
+.can-toggle input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.can-toggle input[type="checkbox"][disabled] ~ label {
+  pointer-events: none;
+}
+.can-toggle input[type="checkbox"][disabled] ~ label .can-toggle__switch {
+  opacity: 0.4;
+}
+.can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:before {
+  content: attr(data-unchecked);
+  left: 10px;
+}
+.can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
+  content: attr(data-checked);
+}
+.can-toggle label {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.can-toggle label .can-toggle__switch {
+  position: relative;
+  cursor: pointer;
+}
+.can-toggle label .can-toggle__switch:before {
+  content: attr(data-checked);
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
+  text-align: center;
+  left: 90px;
+  font-size: 14px;
+  line-height: 35px;
+  width: 67px;
+  padding: 0 12px;
+  color: #fff;
+}
+.can-toggle label .can-toggle__switch:after {
+  content: attr(data-unchecked);
+  position: absolute;
+  z-index: 5;
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.can-toggle input[type="checkbox"][disabled] ~ label {
+  color: rgba(119, 119, 119, 0.5);
+}
+/* .can-toggle input[type="checkbox"]:focus ~ label .can-toggle__switch, .can-toggle input[type="checkbox"]:hover ~ label .can-toggle__switch {
+background-color: #777;
+} */
+.can-toggle input[type="checkbox"]:focus ~ label .can-toggle__switch:after, .can-toggle input[type="checkbox"]:hover ~ label .can-toggle__switch:after {
+color: #5e5e5e;
+}
+.can-toggle input[type="checkbox"]:hover ~ label {
+color: #6a6a6a;
+}
+
+
+
+.can-toggle label .can-toggle__label-text {
+-webkit-box-flex: 1;
+      flex: 1;
+}
+.can-toggle label .can-toggle__switch {
+-webkit-transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+background: #848484;
+}
+
+.can-toggle label .can-toggle__switch:after {          
+  color: #777;
+  top: 1px;
+  left: 4px;
+  border-radius: 30px;
+  width: 85px;
+  line-height:29px;
+  font-size: 14px;
+  border: 2px solid #1ecfee;
+}
+
+.can-toggle input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
+  -webkit-transform: translate3d(80px, 0, 0);
+  transform: translate3d(80px, 0, 0);
+}
+
+.can-toggle label {
+font-size: 14px;
+}
+.can-toggle label .can-toggle__switch {
+  height: 35px;
+  -webkit-box-flex: 0;
+  flex: 0 0 170px;
+  border-radius: 30px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  background: #78a2d3;
+}
+
+
+.can-toggle label .can-toggle__switch:hover:after {
+box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+}
+.can-toggle input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.can-toggle.demo-rebrand-1 input[type="checkbox"][disabled] ~ label {
+color: rgba(181, 62, 116, 0.5);
+}
+
+.can-toggle.demo-rebrand-1 input[type="checkbox"]:checked ~ label .can-toggle__switch {
+  background-color: #afd6e8;
+}
+.can-toggle.demo-rebrand-1 input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
+  color: #31567c;
 }
 /************************* 
 RESPONSIVE 
@@ -907,6 +1381,9 @@ RESPONSIVE
   ._h-textBlock ._numCircle ~ ._titleDiv {
     padding-left: 130px;
   }
+  ._testimonialSection ._testColLeft{
+    max-width: 70%;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -926,9 +1403,23 @@ RESPONSIVE
     max-width: 33.33%;
     margin-bottom: 30px;
   }
+  ._testimonialSection ._testColLeft {
+    position: relative !important;
+    right: 0;
+    max-width: 100%;
+    padding-right: 15px;
+    overflow: hidden;
+  }
+  ._testimonialSection ._testOutter {
+      display: block;
+      margin-right: -0;
+  }
 }
 
 @media (max-width: 1024px) {
+  ._title{
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 991px) {

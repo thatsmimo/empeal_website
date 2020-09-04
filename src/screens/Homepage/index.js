@@ -119,7 +119,7 @@ export default class index extends React.Component {
           <div className="_banner-bottom _c-padding">
             <Container>
               <Row className="_aI-center">
-                <Col xs={12} md={6} lg={5}>
+                <Col xs={12} md={12} lg={5}>
                   <div className="_bannerSliderCont">
                     <Carousel className="_mobScreenSlider">
                       <Carousel.Item>
@@ -146,7 +146,7 @@ export default class index extends React.Component {
                     </Carousel>
                   </div>
                 </Col>
-                <Col xs={12} md={6} lg={7}>
+                <Col xs={12} md={12} lg={7}>
                   <div className="_bannerRigthTextBlock">
                     <div class="_titleDiv">
                       <h2 className="_title">What does Empeal Do?</h2>
@@ -156,7 +156,7 @@ export default class index extends React.Component {
                       <ListGroup.Item>
                         <span className="_iconHolder">
                           <Image
-                            src={Assets.images.foodIcon}
+                            src={Assets.images.heartIconRed}
                             className="_iconImg"
                           />
                         </span>
@@ -172,7 +172,7 @@ export default class index extends React.Component {
                       <ListGroup.Item>
                         <span className="_iconHolder">
                           <Image
-                            src={Assets.images.foodIcon}
+                            src={Assets.images.healthProIcon}
                             className="_iconImg"
                           />
                         </span>
@@ -191,7 +191,7 @@ export default class index extends React.Component {
                       <ListGroup.Item>
                         <span className="_iconHolder">
                           <Image
-                            src={Assets.images.foodIcon}
+                            src={Assets.images.distanceIcon}
                             className="_iconImg"
                           />
                         </span>
@@ -207,7 +207,7 @@ export default class index extends React.Component {
                       <ListGroup.Item>
                         <span className="_iconHolder">
                           <Image
-                            src={Assets.images.foodIcon}
+                            src={Assets.images.foodIcon2}
                             className="_iconImg"
                           />
                         </span>
@@ -274,8 +274,8 @@ export default class index extends React.Component {
           </Container>
         </div>
 
-        {/***** About You : Begin ********/}
-        <div className="_aboutYouSection _c-padding _deepBlue-bg">
+        {/***** About You 1 : Begin ********/}
+        <div className="_aboutYouSection  _deepBlue-bg">
           <div className="_aboutMainDiv">
             <Container>
               <Row className="">
@@ -290,7 +290,7 @@ export default class index extends React.Component {
                   </div>
                 </Col>
                 <Col md={12}>
-                  <div className="text-center _titleDiv">
+                  <div className="text-center _titleDiv _subTitleDiv">
                     <p className="_title-3 _white">
                       What best describes your position?
                     </p>
@@ -343,7 +343,7 @@ export default class index extends React.Component {
                                   />
                                 </span>
                                 <span className="_checkDiv-txt">
-                                  Organisation  lkjhjfgfffffffffdddddddddddddddd
+                                  Organisation
                                 </span>
                               </span>
                             </span>
@@ -434,6 +434,166 @@ export default class index extends React.Component {
           </div>
         </div>
 
+        {/***** About You 2 : Begin ********/}
+        <div className="_aboutYouSection  _deepBlue-bg">
+          <div className="_aboutMainDiv">
+            <Container>
+              <Row className="">
+                <Col xs={12} md={8} className="mx-auto">
+                  <div class="_titleDiv text-center">                    
+                    <h2 className="_title _white">
+                    <span className="_absIcon">
+                    <Image src={require("../../assets/images/np-building.png")} className="" />
+                    </span>
+                    Organisation
+                    </h2>
+                    <p className="_white">
+                    Empeal can help your organisation in many ways
+                    </p>
+                  </div>
+                </Col>
+                <Col md={12}>
+                  <div className="text-center _titleDiv _subTitleDiv">
+                    <a href="#" className="_back">
+                      <Image src={require("../../assets/images/arrow-back.png")} className="" />
+                    </a>
+                    <p className="_title-3 _white">
+                    What does your company struggle with? 
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+              <div className="_careerOptionBox">
+                <div className="_mB-45">
+                  <Row>
+                    <Col md="12" lg="10" className="mx-auto">
+                    {/* Form Begins */}
+                    <Form>
+                      <div class="_radiobox-list _orgLists">
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox"  /> Employee Relation
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox"  /> Presenteeism 
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox" /> Disjointed EAP
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox" /> Too Many Systems
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox"  checked="checked" /> Employee Engagement  
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                        <div className="_orgList">
+                          <label class="_checkbox-label">
+                              <input type="checkbox"   checked="checked"/> Remote Teams 
+                              <span class="_chSpan"></span>
+                          </label>
+                        </div>
+                      </div> 
+                    </Form>
+                    {/* Form Ends */}
+                    </Col>
+                  </Row>                  
+                </div>
+                <div className="text-center">
+                  <p className="_title-3 _white">
+                    Are you ready to see how Empeal can help?
+                  </p>
+                  <a href="#" className="_customBtn-2">
+                    Show Me
+                  </a>
+                </div>
+             </div> 
+            </Container>
+          </div>
+
+          {/* Hill */}
+          <div className="_hillDiv">
+            <Image src={Assets.images.hill} className="" />
+          </div>
+        </div>
+
+        {/***** About You 3 : Begin ********/}
+        <div className="_aboutYouSection  _deepBlue-bg">
+          <div className="_aboutMainDiv">
+            <Container>
+              <Row className="">
+                <Col xs={12} md={8} className="mx-auto">
+                  <div class="_titleDiv text-center">                    
+                    <h2 className="_title _white">
+                    <span className="_absIcon">
+                    <Image src={require("../../assets/images/np-building.png")} className="" />
+                    </span>
+                    Organisation
+                    </h2>
+                    <p className="_white">
+                    Empeal can help your organisation in many ways
+                    </p>
+                  </div>
+                </Col>
+                <Col md={12}>
+                  <div className="text-center _titleDiv _subTitleDiv">
+                    <a href="#" className="_back">
+                      <Image src={require("../../assets/images/arrow-back.png")} className="" />
+                    </a>
+                    <p className="_title-3 _white">
+                    A Strategic Decision for your Organisation:
+                    </p>
+                  </div>
+                </Col>
+              </Row>
+              <div className="_div">
+                <div className="_mB-45">
+                  <Row>
+                    <Col md="6" lg="6" className="">
+                    <div className="_lapMobBox text-center">
+                      <Image src={require("../../assets/images/view-img-1.png")} className="img-fluid" />
+                      <span className="_absImg"><Image src={require("../../assets/images/man-img.png")} className="img-fluid" /></span>
+                    </div>
+                    </Col>
+                    <Col md="6" lg="6" className="">
+                        <ul class="_lists _tickLists">
+                          <li>Easy to rollout, even for remote and multi-location employees</li>
+                          <li>Quantified Health Outcomes</li>
+                          <li>Increased Staff Productivity</li>
+                          <li>Tangible Return on Investment</li>
+                          <li>Anonymised Overview of Health Footprint for BI</li>
+                        </ul>
+                        <p className="_title-2 _white">Lets talk...</p>
+                        <a href="#" className="_customBtn-1">Sign Up Today!</a>
+                    </Col>
+                  </Row>                  
+                </div>                
+             </div> 
+            </Container>
+          </div>
+
+          {/* Hill */}
+          <div className="_hillDiv _hillDiv-2">
+            <Image src={Assets.images.hillSolo} className="" />
+          </div>
+        </div>
+
+        
+
+        
         {/***** Your Story : Begin ********/}
         <div className="_yourStory _c-padding">
           <Container>
@@ -533,14 +693,23 @@ export default class index extends React.Component {
                             <Col md={6}>
                               <figure className="_tabFig">
                                 <Image
-                                  src={require("../../assets/images/tab-img-1.jpg")}
+                                  src={require("../../assets/images/tab-img-1.svg")}
                                   className="img-fluid"
                                 />
                               </figure>
+                              <div class="_bA-div">
+                                <p>See how Empeal worked for Jane</p>
+                                <div className="can-toggle demo-rebrand-1">
+                                    <input id="d" type="checkbox" />
+                                    <label for="d">
+                                        <div className="can-toggle__switch" data-checked="After" data-unchecked="Before"></div>                                     
+                                    </label>
+                                </div>
+                            </div>
                             </Col>
                             <Col md={6}>
                               <div className="_content">
-                                <p>Employee</p>
+                                <p className="_contCat">Employee</p>
                                 <h2 class="_title">John Doe</h2>
                                 <p>
                                   Jane is a customer support team leader. Jane’s
@@ -572,14 +741,14 @@ export default class index extends React.Component {
                             <Col md={6}>
                               <figure className="_tabFig">
                                 <Image
-                                  src={require("../../assets/images/tab-img-1.jpg")}
+                                  src={require("../../assets/images/tab-img-1.svg")}
                                   className="img-fluid"
                                 />
                               </figure>
                             </Col>
                             <Col md={6}>
                               <div className="_content">
-                                <p>Organisation</p>
+                                <p className="_contCat">Organisation</p>
                                 <h2 class="_title">John Doe</h2>
                                 <p>
                                   Jane is a customer support team leader. Jane’s
@@ -611,14 +780,14 @@ export default class index extends React.Component {
                             <Col md={6}>
                               <figure className="_tabFig">
                                 <Image
-                                  src={require("../../assets/images/tab-img-1.jpg")}
+                                  src={require("../../assets/images/tab-img-1.svg")}
                                   className="img-fluid"
                                 />
                               </figure>
                             </Col>
                             <Col md={6}>
                               <div className="_content">
-                                <p>Health Service</p>
+                                <p className="_contCat">Health Service</p>
                                 <h2 class="_title">John Doe</h2>
                                 <p>
                                   Jane is a customer support team leader. Jane’s
@@ -650,14 +819,14 @@ export default class index extends React.Component {
                             <Col md={6}>
                               <figure className="_tabFig">
                                 <Image
-                                  src={require("../../assets/images/tab-img-1.jpg")}
+                                  src={require("../../assets/images/tab-img-1.svg")}
                                   className="img-fluid"
                                 />
                               </figure>
                             </Col>
                             <Col md={6}>
                               <div className="_content">
-                                <p>HR</p>
+                                <p className="_contCat">HR</p>
                                 <h2 class="_title">John Doe</h2>
                                 <p>
                                   Jane is a customer support team leader. Jane’s
@@ -689,14 +858,14 @@ export default class index extends React.Component {
                             <Col md={6}>
                               <figure className="_tabFig">
                                 <Image
-                                  src={require("../../assets/images/tab-img-1.jpg")}
+                                  src={require("../../assets/images/tab-img-1.svg")}
                                   className="img-fluid"
                                 />
                               </figure>
                             </Col>
                             <Col md={6}>
                               <div className="_content">
-                                <p>Employee</p>
+                                <p className="_contCat">Insurance</p>
                                 <h2 class="_title">John Doe</h2>
                                 <p>
                                   Jane is a customer support team leader. Jane’s
@@ -753,7 +922,7 @@ export default class index extends React.Component {
         </div>
 
         {/***** About Company : Begin ********/}
-        <div className="_testimonialSection _c-padding">
+        <div className="_testimonialSection">
           <div className="_testimonialSection-inner">
             <Container>
               <Row className="_testRow _aI-center">
@@ -773,7 +942,7 @@ export default class index extends React.Component {
                 </Col>
                 <Col xs={12} md={8} lg={8} className="_testColLeft">
                   <div class="_testOutter">
-                    <OwlCarousel items={2} className="owl-theme" margin={25}>
+                    <OwlCarousel items={3} className="owl-theme" margin={25}>
                       <div className="_testDiv">
                         <div className="_testCont">
                           <p>
@@ -785,7 +954,7 @@ export default class index extends React.Component {
                         <div className="_testBtmCont">
                           <span className="_testImg">
                             <Image
-                              src={require("../../assets/images/company-award-1.png")}
+                              src={Assets.images.testIcon}
                               className=""
                             />
                           </span>
@@ -806,7 +975,7 @@ export default class index extends React.Component {
                         <div className="_testBtmCont">
                           <span className="_testImg">
                             <Image
-                              src={require("../../assets/images/company-award-1.png")}
+                               src={Assets.images.testIcon}
                               className=""
                             />
                           </span>
@@ -827,7 +996,7 @@ export default class index extends React.Component {
                         <div className="_testBtmCont">
                           <span className="_testImg">
                             <Image
-                              src={require("../../assets/images/company-award-1.png")}
+                              src={Assets.images.testIcon}
                               className=""
                             />
                           </span>
@@ -848,7 +1017,7 @@ export default class index extends React.Component {
                         <div className="_testBtmCont">
                           <span className="_testImg">
                             <Image
-                              src={require("../../assets/images/company-award-1.png")}
+                               src={Assets.images.testIcon}
                               className=""
                             />
                           </span>
@@ -869,7 +1038,7 @@ export default class index extends React.Component {
                         <div className="_testBtmCont">
                           <span className="_testImg">
                             <Image
-                              src={require("../../assets/images/company-award-1.png")}
+                              src={Assets.images.testIcon}
                               className=""
                             />
                           </span>
@@ -893,7 +1062,7 @@ export default class index extends React.Component {
             <Row className="">
               <Col md={12} lg={6} className="mx-auto">
                 <div class="_titleDiv text-center">
-                  <h2 className="_title">Our Blog</h2>
+                  <h2 className="_title">Our blog</h2>
                   <p>
                     Quidam officiis similique sea ei, vel tollit indoctum
                     efficiendi ei, at nihil tantas platonem eos.{" "}
@@ -980,7 +1149,7 @@ export default class index extends React.Component {
           </Container>
         </div>
 
-        {/***** Blog Section : Begin ********/}
+        {/***** Uptodate Section : Begin ********/}
         <div className="_uptodateSection _c-padding _bg-white">
           <Container>
             <Row className="">
@@ -995,8 +1164,11 @@ export default class index extends React.Component {
               {/* Col : Begin  */}
               <Col md={12} lg={4} className="_uptCol">
                 <div className="_subsOutter">
+                  <span className="_pin">
+                    <Image src={Assets.images.pin} className="" />
+                  </span>
                   <span className="_boyHoping">
-                    <Image src={Assets.images.boyHoping} className="" />
+                    <Image src={Assets.images.boyHoping2} className="" />
                   </span>
                   <div className="_subsDiv text-center">
                     <h3 className="_title-1">Catch up with Empeal!</h3>
