@@ -11,6 +11,9 @@ import {
   Carousel,
   Nav,
   Tab,
+  Navbar,
+  NavDropdown
+
 } from "react-bootstrap";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -37,19 +40,39 @@ export default class index extends React.Component {
       <div className="_main">
         {/***** Header : Begin ********/}
         <div className="_header-main">
-          <Container>
-            <Row>
-              <Col>
+          <Container-fluid>
+            {/* Navbar Begin */}
+            <Navbar collapseOnSelect expand="lg" bg="" variant="">
+              <Navbar.Brand href="#home">
                 <div className="_logo">
-                  <a href="#">
+                  <a href="/home">
                     <img src={Assets.images.logo} className="_logo" />
                     {/* Logo */}
                   </a>
                 </div>
-              </Col>
-              <Col></Col>
-            </Row>
-          </Container>
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
+                  <div className="_navList"><Nav.Link href="#features">Product</Nav.Link></div>
+                  <div className="_navList"><Nav.Link href="/about">Company</Nav.Link></div>
+                  <div className="_navList"><Nav.Link href="/library">Library</Nav.Link></div>
+                  <div className="_navList"><Nav.Link href="#">Contact</Nav.Link></div>
+                  {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                  </NavDropdown> */}
+                </Nav>               
+              </Navbar.Collapse>
+              <div className="_hdrUserDiv">
+                  <a href="" className="btn _btnCustom-2">Sign In</a>
+              </div>
+            </Navbar>
+            {/* Navbar End */}
+          </Container-fluid>
         </div>
 
         {/***** Banner : Begin ********/}
@@ -239,7 +262,7 @@ export default class index extends React.Component {
                   </span>
                   <div class="_titleDiv">
                     <h2 className="_title">An Award Winning Company</h2>
-                    <p>
+                    <p className="_title_txt">
                       In 2019 Empeal won an award for Business Excellence CSR.
                       We were thrilled with this. In 2019 Empeal won an award
                       for Business Excellence & CSR. We were thrilled with this.
@@ -282,7 +305,7 @@ export default class index extends React.Component {
                 <Col xs={12} md={8} className="mx-auto">
                   <div class="_titleDiv text-center">
                     <h2 className="_title _white">Tell us about you… </h2>
-                    <p className="_white">
+                    <p className="_title_txt _white">
                       We create bespoke, personalised health plans for groups
                       and individuals, which benefits organisations, insurance
                       and EAP providers as well as health services.
@@ -430,7 +453,7 @@ export default class index extends React.Component {
 
           {/* Hill */}
           <div className="_hillDiv">
-            <Image src={Assets.images.hill} className="" />
+            <Image src={Assets.images.hill} className="img-fluid" />
           </div>
         </div>
 
@@ -447,7 +470,7 @@ export default class index extends React.Component {
                     </span>
                     Organisation
                     </h2>
-                    <p className="_white">
+                    <p className="_white _title_txt">
                     Empeal can help your organisation in many ways
                     </p>
                   </div>
@@ -543,7 +566,7 @@ export default class index extends React.Component {
                     </span>
                     Organisation
                     </h2>
-                    <p className="_white">
+                    <p className="_white _title_txt">
                     Empeal can help your organisation in many ways
                     </p>
                   </div>
@@ -601,7 +624,7 @@ export default class index extends React.Component {
               <Col md={12} lg={8} className="mx-auto">
                 <div class="_titleDiv text-center">
                   <h2 className="_title _blue-1">We Know Your Story...</h2>
-                  <p>
+                  <p className="_title_txt">
                     Our measurable metrics based on medical, nutrition,
                     lifestyle, behaviour and individual goals data, help users
                     and organisations understand their health footprint and act
@@ -930,7 +953,7 @@ export default class index extends React.Component {
                   <div className="_abtBlock">
                     <div class="_titleDiv">
                       <h2 className="_title">Testimonials</h2>
-                      <p>
+                      <p className="_title_txt">
                         See what those who use Empeal have to say about it. All
                         different users share their experiences…
                       </p>
@@ -1063,7 +1086,7 @@ export default class index extends React.Component {
               <Col md={12} lg={6} className="mx-auto">
                 <div class="_titleDiv text-center">
                   <h2 className="_title">Our blog</h2>
-                  <p>
+                  <p className="_title_txt">
                     Quidam officiis similique sea ei, vel tollit indoctum
                     efficiendi ei, at nihil tantas platonem eos.{" "}
                   </p>
@@ -1287,7 +1310,7 @@ export default class index extends React.Component {
                   </span>
                   <div class="_titleDiv _mB-0">
                     <h2 className="_title _white">How Healthy are You?</h2>
-                    <p class="_white _fW-400">
+                    <p class="_title_txt _white _fW-400">
                       Take our quiz to give you a greater insight into your
                       health with. Short questions will help you find out a bit
                       more about your day to day habits and make you come more
@@ -1359,13 +1382,13 @@ export default class index extends React.Component {
                       <h3 className="_title-3">Information</h3>
                       <ul className="_f-lists">
                         <li>
-                          <a href="#">Blog</a>
+                          <a href="/library">Blog</a>
                         </li>
                         <li>
                           <a href="#">News</a>
                         </li>
                         <li>
-                          <a href="#">About</a>
+                          <a href="/about">About</a>
                         </li>
                       </ul>
                     </Col>

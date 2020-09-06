@@ -43,10 +43,14 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #2a333b;
+  font-size: 16px;
+  font-weight: 400;
 }
 p {
   margin-bottom: 20px;
   color: #2a333b;
+  font-size: 16px;
+  font-weight: 400;
 }
 ul, li{
   padding: 0;
@@ -55,6 +59,51 @@ ul, li{
 img{
   max-width: 100%;
 }
+
+
+
+/* Container width*/
+
+.container {
+  max-width: 1360px !important;
+}
+
+@media (max-width: 1400px) {
+  .container {
+      max-width: 1140px !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .container {
+      max-width: 1100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+      max-width: 960px !important;
+  }
+}
+
+@media (max-width:991px) {
+  .container {
+      max-width: 720px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+      max-width: 540px !important;
+  }
+}
+
+@media (max-width: 539px) {
+  .container {
+      max-width: 100%;
+  }
+}
+
 /*************** Colors ***********/
 ._white {
   color: #fff !important;
@@ -85,8 +134,11 @@ img{
 
 /*************** Paddings ***********/
 ._c-padding {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+._pB-0{
+  padding-bottom: 0 !important;
 }
 /*************** Margins ***********/
 ._mB-0 {
@@ -110,6 +162,12 @@ img{
 }
 ._fW-400 {
   font-weight: 400 !important;
+}
+._fW-500 {
+  font-weight:500 !important;
+}
+._fW-600 {
+  font-weight:600 !important;
 }
 /*************** Titles ***********/
 ._titleDiv {
@@ -135,6 +193,9 @@ img{
   line-height: 50px;
   font-weight: 700;
 }
+._title_txt {
+  font-size: 18px;
+}
 ._title-1 {
   font-size: 35px;
   font-weight: 700;
@@ -155,6 +216,15 @@ img{
   font-size: 20px;
   color: #31567c;
   font-weight: 700;
+}
+._title-5 {
+  font-size:18px;
+  color: #31567c;
+  font-weight: 700;
+}
+._txtLarge{
+  font-size: 18px;
+  font-weight: 500;
 }
 /*************** Buttons ***********/
 ._appBtn {
@@ -198,7 +268,7 @@ img{
 }
 ._btnCustom-2 {
   height: 45px;
-  min-width: 145px;
+  min-width: 170px;
   background-color: #29abe2 !important;
   border: 1px solid #29abe2 !important;
   padding: 5px 15px;
@@ -213,11 +283,11 @@ img{
   border: 1px solid #9bd025 !important;
 }
 ._btnCustom-3 {
-  height: 45px;
-  min-width: 145px;
+  height: 50px;
+  min-width: 160px;
   background-color: #9bd025 !important;
   border: 1px solid #9bd025 !important;
-  padding: 5px 15px;
+  padding: 8px 15px !important;
   color: #fff !important;
   font-size: 18px !important;
   line-height: 30px !important;
@@ -229,11 +299,11 @@ img{
   border: 1px solid #29abe2 !important;
 }
 ._btnCustom-4 {
-  height: 45px;
-  min-width: 145px;
+  height: 50px;
+  min-width: 160px;
   background-color: #31567c !important;
   border: 1px solid #31567c !important;
-  padding: 5px 15px;
+  padding: 8px 15px !important;
   color: #fff !important;
   font-size: 18px !important;
   line-height: 30px !important;
@@ -254,17 +324,26 @@ img{
 ._main {
   background-color: #edf4fc;
 }
-._header-main {
-  padding: 15px 0;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
+
 
 /************************* 
 Header Section
 *************************/
+._header-main {
+  padding: 20px 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+._header-main._header {
+  background-color: #fff;
+  box-shadow: 0 0 10px 8px rgba(0,0,0,0.05);
+}
+._header-main .navbar{
+  padding: 0 45px;
+}
 ._logo {
   display: inline-block;
   width: 145px;
@@ -272,6 +351,25 @@ Header Section
 ._logo img {
   width: 100%;
   height: auto;
+}
+.navbar-nav{
+  margin-right: 30px !important;
+}
+
+.navbar-nav ._navList{
+  padding: 0 20px;
+}
+.navbar-nav a{
+  font-size: 20px;
+  color: #31567C;
+  font-weight: 500;
+}
+.navbar-nav a:hover{
+  color: #9BD025;
+}
+
+._hdrUserDiv ._btnCustom-2{
+  min-width: 125px
 }
 
 /************************* 
@@ -302,13 +400,13 @@ Banner Section
 }
 ._titleTxt {
   font-size: 20px;
-  line-break: 30px;
+  line-height: 30px;
   color: #2a333b;
   font-weight: 600;
 }
 ._titleLarge {
-  font-size: 70px;
-  line-height: 75px;
+  font-size: 60px;
+  line-height: 70px;
   font-weight: 700;
   color: #31567c;
   margin-bottom: 20px;
@@ -332,6 +430,10 @@ Banner Section
 }
 ._bannerCont {
   position: relative;
+}
+._bannerCont ._titleLarge{
+  font-size: 72px;
+  line-height: 80px;
 }
 ._womanImg {
   position: absolute;
@@ -367,6 +469,9 @@ Banner Section
   align-items: center;
 }
 
+._bannerRigthTextBlock{
+  padding-right: 150px;
+}
 ._customListGrp-1 {
 }
 
@@ -397,10 +502,16 @@ Banner Section
 ._customListGrp-1 .list-group-item ._iconHolder ~ ._listCont {
   padding-left: 80px;
 }
+._listCont p{
+  font-size: 18px;
+  font-weight: 500;
+}
 
 ._listCont ._title-4 {
   margin-bottom: 5px;
   text-transform: capitalize;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 ._mobScreenSlider .carousel-indicators li {
@@ -476,6 +587,11 @@ About You Section
 ._aboutMainDiv {
   position: relative;
   z-index: 1;
+}
+
+._careerOptionBox{
+  padding-left: 120px;
+  padding-right: 120px;
 }
 ._fRow {
   display: flex;
@@ -718,6 +834,11 @@ Helth Management Section
 ._h-textBlock {
   position: relative;
 }
+
+._h-textBlock ._title_txt{
+  font-size: 22px;
+  line-height: 30px;
+}
 ._h-textBlock ._numCircle {
   position: absolute;
   left: 0;
@@ -818,9 +939,15 @@ Blog Section
 ._bg-white {
   background-color: #fff !important;
 }
+._blogRow {
+  margin-bottom: -30px;
+}
+._blogCol{
+  margin-bottom: 30px;
+}
 ._blogTitle {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 24px;
+  line-height: 30px;
   color: #31567c;
   font-weight: 700;
   margin-bottom: 10px;
@@ -839,6 +966,7 @@ Blog Section
   margin-bottom: 15px;
   background-color: #ddd;
   overflow: hidden;
+  border-radius: 10px; 
 }
 ._blogFig img {
   height: 100%;
@@ -975,6 +1103,10 @@ Up to Date Section
   padding: 7px;
 }
 
+
+/************************* 
+Footer Section
+*************************/
 ._f-logo {
   margin-bottom: 20px;
 }
@@ -1192,7 +1324,7 @@ Up to Date Section
   font-size: 18px;
   padding-left: 55px;
   padding-bottom: 20px;
-  background-image: url(/static/media/table-tick.d085d86d.svg);
+  background-image: url(assets/images/table-tick.svg);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1352,6 +1484,306 @@ color: rgba(181, 62, 116, 0.5);
 .can-toggle.demo-rebrand-1 input[type="checkbox"]:checked ~ label .can-toggle__switch:after {
   color: #31567c;
 }
+
+
+
+/************************* 
+Story Section
+*************************/
+._topGap{
+  padding-top: 85px;
+}
+._c-padding._topGap {
+  padding-top: 145px;
+}
+
+
+._storySection{
+  background: url(assets/images/gradient-background-1.svg) no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 0;
+}
+
+/* ._storySection:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url(assets/images/hill-right.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+} */
+._storySection ._textCard-row{
+  margin-right: -45px;
+  margin-left: -45px;
+}
+._storySection ._textCard-col{
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-bottom: 45px;
+}
+._textCard p{
+  color: #2A333B;
+  font-weight: 500;
+}
+._btmHill{
+  text-align: right;
+  position: relative;
+  margin-top: -50px;
+}
+._btmHill img{
+  width: 85%;
+    max-width: 100%;
+}
+._janeImg {
+  position: absolute;
+  bottom: 60px;
+  left: 40%;
+}
+
+/************************* 
+Team Page 
+*************************/
+._teamCard-col{
+  margin-bottom: 45px;
+}
+._teamCard {
+  background-color: #fff;
+  position: relative;
+  transition: all 0.5s;
+  border-radius: 10px;
+  overflow: hidden;
+}
+._teamCard:hover{
+  box-shadow: 0 1rem 3rem rgba(31,45,61,.125);
+}
+._teamCard > .row{
+  margin: 0;
+}
+._teamCard > .row > div{
+  padding: 0;
+}
+._teamCard-fig{
+  height: 100%;
+}
+._tc-inner-row{
+  margin: 0;
+}
+._tc-inner-col{
+  padding: 0;
+}
+._teamCard-fig img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+._teamCard-cont {
+  padding: 45px 35px 30px;
+  text-align: center;
+}
+._teamCard-titleDiv{
+  margin-bottom: 15px;
+}
+._teamCard-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: 3px;
+  color: #31567C;
+}
+._teamCard-subtitle {
+  color: #31567C;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+._teamCard-cont ._txt{
+  color: #2A333B;
+  font-weight: 500;
+}
+._teamCard-titleDiv{
+  margin-bottom: 15px;
+}
+._sLinks{
+  padding-left: 0;
+}
+._sLinks li {
+  padding-right:10px;
+  display: inline-block;
+}
+._sLinks li a{
+  height: 50px;
+  width: 50px;
+  border: 2px solid #0B86CA;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px;
+}
+._sLinks li img{
+  max-height: 20px;
+}
+
+/************************* 
+Library Page 
+*************************/
+._librarySection-1 {
+  position: relative;
+  padding-bottom: 0;
+}
+._librarySection-1  ._textCard-row{
+  align-items: center;
+}
+._darkSky{
+  background-image: url(assets/images/blue-sky-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  position: relative;
+}
+._darkSky:before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(assets/images/star-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+._infoList{
+  color: #fff;
+  display: block;
+  list-style: none;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #D8D8D8;
+}
+._infoList ._title-3{
+  margin-bottom: 5px;
+}
+._infoList p{
+  color: #fff;
+}
+._infoTxts {
+  margin-bottom: 5px;
+}
+._infoTxts span {
+  display: inline-block;
+  padding-right: 5px;
+}
+._infoTxts span:not(:first-child){
+  padding-left: 5px;
+}
+
+._l-btm-hill{
+  text-align: right;
+  position: relative;
+ }
+ ._menConv{
+   position: absolute;
+   bottom: 65px;
+   right: 35%;
+ }
+ ._menConv img{
+  transform: rotateY(180deg);
+ }
+ ._libraryNavCont {
+    text-align: center; 
+   margin-bottom: 45px;
+ }
+ ._libraryNavCont .nav {
+  display: inline-flex;
+  justify-content: center;
+  border-bottom: 2px solid #edf4fc;
+}
+
+._libraryNavCont .nav-pills .nav-link{
+  font-size: 24px;
+  color: #31567C;
+  border-radius: 0;
+  padding: 10px 25px;
+  position: relative;
+}
+._libraryNavCont .nav-pills .nav-link:before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #31567c;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  transition: all 0.4s;
+}
+._libraryNavCont .nav-pills .nav-link.active:before{
+  width: 100%;
+}
+._libraryNavCont .nav-pills .nav-link.active{
+  font-weight: 700;
+}
+._libraryNavCont .nav-pills .nav-link.active, ._libraryNavCont .nav-pills .show>.nav-link {
+  color: #31567C;
+  background-color: transparent;
+}
+
+
+/************************* 
+Product 
+*************************/
+._productSection-1{
+  background-image: url(assets/images/pro-bg-banner-1.svg);
+  background-repeat: no-repeat;
+  background-position: -200px top;
+  position: relative;
+  padding: 45px 0 180px;
+}
+._productSection-1::before{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-image: url(assets/images/pro-bg-banner-2.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  bottom: 0;
+}
+._proCont{
+  padding-left: 100px;
+  padding-right: 75px;
+}
+._mobDiv img{
+  margin-left:0px;
+  max-height: 750px;
+}
+
+._productSection-2{
+  background-color: #31567C;
+  /* min-height: 700px; */
+}
+._explainerFunnel{
+  text-align: center;
+}
+
+._accordianContainer{}
+
+._accordianContainer .card-header{
+  background: transparent;
+  border: none;
+}
+
 /************************* 
 RESPONSIVE 
 *************************/
@@ -1360,18 +1792,18 @@ RESPONSIVE
     margin-bottom: 30px;
   }
   ._c-padding {
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   ._titleLarge {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 60px;
+    line-height: 65px;
   }
 }
 @media (max-width: 1480px) {
   ._titleTxt {
     font-size: 18px;
-    line-break: 27px;
+    line-height: 27px;
   }
   ._numCircle {
     height: 100px;
@@ -1388,8 +1820,8 @@ RESPONSIVE
 
 @media (max-width: 1199px) {
   ._titleLarge {
-    font-size: 36px;
-    line-height: 40px;
+    font-size: 45px;
+    line-height: 50px;
   }
   ._iconHolder {
     height: 35px;
@@ -1413,6 +1845,18 @@ RESPONSIVE
   ._testimonialSection ._testOutter {
       display: block;
       margin-right: -0;
+  }
+  ._storySection ._textCard-row{
+    margin-right: -30px;
+    margin-left: -30px;
+  }
+  ._storySection ._textCard-col{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  ._libraryNavCont .nav-pills .nav-link{
+    font-size: 18px;
+    padding: 10px 15px;
   }
 }
 
