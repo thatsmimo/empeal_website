@@ -43,13 +43,15 @@
 body {
   font-family: "Open Sans", sans-serif;
   color: #2a333b;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 400;
 }
 p {
   margin-bottom: 20px;
   color: #2a333b;
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 30px;
   font-weight: 400;
 }
 ul, li{
@@ -65,7 +67,27 @@ img{
 /* Container width*/
 
 .container {
-  max-width: 1360px !important;
+  max-width: 1980px !important;
+}
+@media (max-width: 2000px) {
+  .container {
+    max-width: 1870px !important;
+  }
+}
+@media (max-width: 1990px) {
+  .container {
+    max-width: 1750px !important;
+  }
+}
+@media (max-width: 1930px) {
+  .container {
+    max-width: 1500px !important;
+  }
+}
+@media (max-width: 1600px) {
+  .container {
+    max-width: 1360px !important;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -192,6 +214,7 @@ img{
   font-size: 45px;
   line-height: 50px;
   font-weight: 700;
+  margin-bottom: 15px;
 }
 ._title_txt {
   font-size: 18px;
@@ -363,6 +386,9 @@ Header Section
   font-size: 20px;
   color: #31567C;
   font-weight: 500;
+}
+._home .navbar-nav a{
+  color: #fff;
 }
 .navbar-nav a:hover{
   color: #9BD025;
@@ -1182,6 +1208,15 @@ Footer Section
 ._subTitleDiv ._back img{
   max-height: 40px;
 }
+._footerMain .row .row{
+  justify-content: space-between;
+}
+._footerMain .row .row > div {
+  flex: 0 0 auto;
+  max-width: 33.333333%;
+  width: auto;
+  padding-left: 45px;
+}
 /* Radio Box */
 ._radiobox-label{
   display: block;
@@ -1744,11 +1779,12 @@ Library Page
 Product 
 *************************/
 ._productSection-1{
-  background-image: url(assets/images/pro-bg-banner-1.svg);
+  background-image: url(/static/media/pro-bg-banner-1.ebd5fc67.svg);
   background-repeat: no-repeat;
-  background-position: -200px top;
+  background-position: -135px 0;
   position: relative;
   padding: 45px 0 180px;
+  background-size: 60%;
 }
 ._productSection-1::before{
   position: absolute;
@@ -1764,9 +1800,11 @@ Product
   padding-left: 100px;
   padding-right: 75px;
 }
+._mobDiv{
+  
+}
 ._mobDiv img{
-  margin-left:0px;
-  max-height: 750px;
+  margin-left:0px;  
 }
 
 ._productSection-2{
@@ -1779,14 +1817,68 @@ Product
 
 ._accordianContainer{}
 
+._acCard-col .card{
+  margin-bottom: 30px;
+}
 ._accordianContainer .card-header{
   background: transparent;
   border: none;
+  position: relative;
+  padding: 20px 30px 15px;
+  padding-right: 60px;
+}
+._accordianContainer .card-header::before{
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  background-image: url(assets/images/plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  right: 30px;
+  top: 23px;
+}
+._accordianContainer .card-header{
+  cursor: pointer;
+}
+._accordianContainer .card-header p{
+  margin-bottom: 0;
+}
+._accordianContainer .card-body{ 
+  color: #2A333B;
+  font-weight: 500;
+  padding: 0 60px 25px 30px;
 }
 
+
+/************************* 
+Pricing  
+*************************/
+._pricingPage{}
+
+._pricingPage ._l-btm-hill{
+  margin-top: -100px;
+  position: relative;
+} 
+._pricingPage ._absImg{
+  position: absolute;
+  bottom: 75px;
+  right: 11%;
+}
+._pricingPage ._absImg img{}
 /************************* 
 RESPONSIVE 
 *************************/
+@media (max-width: 1960px){
+  body{
+    font-size: 16px;
+    line-height: 28px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 28px;
+  }
+}
 @media (max-width: 1600px) {
   ._titleDiv {
     margin-bottom: 30px;
@@ -1798,6 +1890,9 @@ RESPONSIVE
   ._titleLarge {
     font-size: 60px;
     line-height: 65px;
+  }
+  ._productSection-1{
+    background-size: 65%;
   }
 }
 @media (max-width: 1480px) {
@@ -1858,6 +1953,9 @@ RESPONSIVE
     font-size: 18px;
     padding: 10px 15px;
   }
+  ._footerMain .row .row > div{
+    padding-left: 25px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1870,6 +1968,12 @@ RESPONSIVE
 }
 
 @media (max-width: 767px) {
+  ._footerMain .row .row > div {
+      flex: 0 0 100%;
+      max-width: 100%;
+      width: unset;
+      padding-left: 15px;
+  }
 }
 
 @media (max-width: 630px) {
