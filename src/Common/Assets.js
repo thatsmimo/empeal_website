@@ -30,6 +30,18 @@ const Assets = {
         tableTick : require('../assets/images/table-tick.svg'),
         testIcon : require('../assets/images/testimonial-icon.svg'),
         pin : require('../assets/images/pin.png'),
+        pinkGradBg : require('../assets/images/gradient-background-1.svg'),
+        rightHill : require('../assets/images/hill-right.svg'),
+        teamImg1 : require('../assets/images/team-img-1.jpg'),
+        teamImg2 : require('../assets/images/team-img-2.jpg'),
+        teamImg3 : require('../assets/images/team-img-3.jpg'),
+        teamImg4 : require('../assets/images/team-img-4.jpg'),
+        teamImg5 : require('../assets/images/team-img-5.jpg'),
+        teamImg6 : require('../assets/images/team-img-6.jpg'),
+        linkedIn : require('../assets/images/linkedin.png'),
+        menConversation : require('../assets/images/men-conversation.svg'),
+        explainerFunnel : require('../assets/images/explainer-img.svg'),
+        manBenchHill : require('../assets/images/man-sitting-on-bench-hill.svg'),
     }
 }
 
