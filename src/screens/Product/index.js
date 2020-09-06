@@ -128,10 +128,10 @@ function Product() {
                     <Accordion defaultActiveKey="0">
                       <Row className="">
                           {/* Col : Begin */}
-                          <Col md={6} lg={6} className="">
+                          <Col md={6} lg={6} className="_acCard-col">
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="0">
-                              Integrated
+                              <p className="_title-3">Integrated</p>
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="0">
                                 <Card.Body>
@@ -139,20 +139,62 @@ function Product() {
                                 </Card.Body>
                               </Accordion.Collapse>
                             </Card>
-                          </Col>
-                          {/* Col : End */}
-                          {/* Col : Begin */}
-                          <Col md={6} lg={6} className="">
                             <Card>
                               <Accordion.Toggle as={Card.Header} eventKey="1">
-                                Click me!
+                              <p className="_title-3">Intelligent</p>
                               </Accordion.Toggle>
                               <Accordion.Collapse eventKey="1">
-                                <Card.Body>Hello! I'm another body</Card.Body>
+                                <Card.Body>
+                                We integrate movement, sleep, heart rate and other data from wearables / mobile-devices into a single platform. We integrate that with Nutrition information to give users a 360 degree view of their health.
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>                          
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="2">
+                              <p className="_title-3">Innovative</p>
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="2">
+                                <Card.Body>
+                                We integrate movement, sleep, heart rate and other data from wearables / mobile-devices into a single platform. We integrate that with Nutrition information to give users a 360 degree view of their health.
+                                </Card.Body>
                               </Accordion.Collapse>
                             </Card>
                           </Col>
-                          {/* Col : End */}                    
+                          {/* Col : End */}   
+                          {/* Col : Begin */}
+                          <Col md={6} lg={6} className="_acCard-col">
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="4">
+                              <p className="_title-3">Cross-Platform</p>
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="4">
+                                <Card.Body>
+                                We integrate movement, sleep, heart rate and other data from wearables / mobile-devices into a single platform. We integrate that with Nutrition information to give users a 360 degree view of their health.
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="5">
+                              <p className="_title-3">Insightful</p>
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="5">
+                                <Card.Body>
+                                We integrate movement, sleep, heart rate and other data from wearables / mobile-devices into a single platform. We integrate that with Nutrition information to give users a 360 degree view of their health.
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                            <Card>
+                              <Accordion.Toggle as={Card.Header} eventKey="6">
+                              <p className="_title-3">Creative</p>
+                              </Accordion.Toggle>
+                              <Accordion.Collapse eventKey="6">
+                                <Card.Body>
+                                We integrate movement, sleep, heart rate and other data from wearables / mobile-devices into a single platform. We integrate that with Nutrition information to give users a 360 degree view of their health.
+                                </Card.Body>
+                              </Accordion.Collapse>
+                            </Card>
+                          </Col>
+                          {/* Col : End */}              
                       </Row>
                     </Accordion>                       
                   </div>              
@@ -168,7 +210,7 @@ function Product() {
                         <h2 className="_title">View Pricing</h2>
                         <p class="_title_txt _fW-500">Pri ea vivendo omnesque, eos lobortis inimicus mediocritatem id. Pro ad ubique erroribus, in modo mutat sed. Ei vix quot suscipit, natum animal qui et. Usu vitae decore ut. Quidam officiis similique sea ei, vel tollit indoctum efficiendi ei, at nihil tantas platonem eos.</p>                        
                         <div className="_btn-div text-center">
-                          <a href="#" className="btn _btnCustom-3">
+                          <a href="/pricing" className="btn _btnCustom-3">
                             Pricing
                           </a>
                         </div> 

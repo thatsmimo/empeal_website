@@ -37,7 +37,7 @@ import { Assets } from "../../Common";
 export default class index extends React.Component {
   render() {
     return (
-      <div className="_main">
+      <div className="_main _home">
         {/***** Header : Begin ********/}
         <div className="_header-main">
           <Container-fluid>
@@ -54,7 +54,7 @@ export default class index extends React.Component {
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-auto">
-                  <div className="_navList"><Nav.Link href="#features">Product</Nav.Link></div>
+                  <div className="_navList"><Nav.Link href="/product">Product</Nav.Link></div>
                   <div className="_navList"><Nav.Link href="/about">Company</Nav.Link></div>
                   <div className="_navList"><Nav.Link href="/library">Library</Nav.Link></div>
                   <div className="_navList"><Nav.Link href="#">Contact</Nav.Link></div>

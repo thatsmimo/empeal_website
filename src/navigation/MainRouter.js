@@ -7,6 +7,7 @@ import Homepage from "../screens/Homepage";
 import OurTeam from "../screens/OurTeam";
 import Library from "../screens/Library";
 import Product from "../screens/Product";
+import Pricing from "../screens/Pricing";
 
 export default function MainRouter() {
   return (
@@ -18,6 +19,7 @@ export default function MainRouter() {
       <Route exact path="/ourteam" component={OurTeam}></Route>
       <Route exact path="/library" component={Library}></Route>
       <Route exact path="/product" component={Product}></Route>
+      <Route exact path="/pricing" component={Pricing}></Route>
     </Switch>
   );
 }
