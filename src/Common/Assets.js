@@ -42,6 +42,9 @@ const Assets = {
         menConversation : require('../assets/images/men-conversation.svg'),
         explainerFunnel : require('../assets/images/explainer-img.svg'),
         manBenchHill : require('../assets/images/man-sitting-on-bench-hill.svg'),
+        wrong : require('../assets/images/close.png'),
+        right : require('../assets/images/currect.png'),
+        manAtDesk : require('../assets/images/man-at-desk.svg'),
     }
 }
 
