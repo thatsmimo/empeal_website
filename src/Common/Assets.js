@@ -25,7 +25,7 @@ const Assets = {
         poscastIcon : require('../assets/images/podcast.png'),
         interviewIcon : require('../assets/images/interview.png'),
         boyHoping : require('../assets/images/boy_hoping.png'),
-        boyHoping2 : require('../assets/images/boy-hop-2.svg'),
+        boyHoping2 : require('../assets/images/boy-hop-2.png'),
         girlCycle : require('../assets/images/girl-with-bicycle.svg'),
         tableTick : require('../assets/images/table-tick.svg'),
         testIcon : require('../assets/images/testimonial-icon.svg'),
@@ -45,6 +45,9 @@ const Assets = {
         wrong : require('../assets/images/close.png'),
         right : require('../assets/images/currect.png'),
         manAtDesk : require('../assets/images/man-at-desk.svg'),
+        janeSad : require('../assets/images/jane-sad.svg'),
+        angryIcon : require('../assets/images/angry-icon.png'),
+        goalIcon : require('../assets/images/goal.png'),
     }
 }
 

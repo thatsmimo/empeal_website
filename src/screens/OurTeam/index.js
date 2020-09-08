@@ -344,7 +344,7 @@ function OurTeam() {
               <Row className="_aI-center">
                 <Col md={12} lg={6}>
                   <div className="">
-                    <p className="_white">© Copyright 2020 Empea</p>
+                    <p className="_white">© Copyright 2020 Empeal</p>
                   </div>
                 </Col>
                 <Col md={12} lg={6}>
