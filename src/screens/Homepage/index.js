@@ -749,7 +749,7 @@ export default class index extends React.Component {
                                   <strong>there was a way</strong> to{" "}
                                   <strong>balance her life better</strong>.{" "}
                                 </p>
-                                <a href="#" className="btn _btnCustom-2">
+                                <a href="/stories" className="btn _btnCustom-2">
                                   Full Story
                                 </a>
                               </div>
@@ -1416,7 +1416,7 @@ export default class index extends React.Component {
               <Row className="_aI-center">
                 <Col md={12} lg={6}>
                   <div className="">
-                    <p className="_white">© Copyright 2020 Empea</p>
+                    <p className="_white">© Copyright 2020 Empeal</p>
                   </div>
                 </Col>
                 <Col md={12} lg={6}>

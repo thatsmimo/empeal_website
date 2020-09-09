@@ -1091,30 +1091,32 @@ Up to Date Section
   position: relative;
   background: #edf4fc;
   border: 10px solid #ced6e9;
-  padding: 120px 25px 65px 25px; 
+  padding: 160px 25px 65px 25px; 
   border-radius: 10px;
-  width: 315px;
+  width: 370px;
   max-width: 100%;
   /* background: url(assets/images/catchup-graphics.svg) no-repeat; */
 }
 ._boyHoping {
   display: inline-block;
-  top: -40px;
+  top: -70px;
   position: absolute;
   left: 15px;
 }
 ._boyHoping img{
-  width: 200px
+  width: auto;
 }
 ._subsOutter ._title-1 {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 35px;
 }
 ._pin{
   position: absolute;
   left: 0;
   right: 0;
   margin: 0 auto;
-  top: -27px;
+  top: -50px;
   display: inline-block;
   width: 32px;
 }
@@ -1963,6 +1965,93 @@ Pricing
 }
 ._tab3Pane-inner {
   padding: 0 70px;
+}
+
+._storyPage{
+  background-image: url(assets/images/banner-bg.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-color: #fff;
+  background-size: 55%;
+}
+._iconInfoDiv-2{
+  position: relative;
+}
+._iconInfoDiv-2 ._iconHolder{
+  position: absolute;
+  height: 70px;
+  width: 70px;
+}
+._iconInfoDiv-2 ._iconHolder ~ ._listCont{
+  padding-left: 100px;
+}
+._iconInfoDiv-2 ._title-4{
+  margin-bottom: 15px;
+}
+._aboutInfo li{
+  list-style: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+._list{
+  padding: 0;
+}
+._list li{
+  list-style: none;
+  color: #31567C;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+._progDiv:not(:last-child){
+  margin-bottom: 15px;
+}
+._progTxt {
+  color: #31567C;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+._progRow{
+  margin-right: -30px !important;
+  margin-left: -30px !important;
+}
+._progRow ._progCol {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+._barDiv .progress {
+  height: 16px;
+  border-radius: 30px;
+  background-color: #CED6E9;
+}
+._barDiv .progress-bar{
+  border-radius: 30px;
+  background-color: #29ABE2;
+}
+._barDiv._pro-org .progress-bar{
+  background-color: #FF963C;
+}
+._barDiv._pro-green .progress-bar{
+  background-color: #9BD025;
+}
+
+._howItWork {
+  padding: 45px 0 60px;
+  text-align: center;
+}
+._link2 {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 50px;
+  color: #31567C;
+  font-weight: 500;
+  padding-right: 70px;
+  background: url(assets/images/blue-right-arrow.png) no-repeat;
+  background-position: 97% 8px;
+    transition: all 0.5s;
+}
+._link2:hover{
+  background-position: 100% 8px;
 }
 /************************* 
 RESPONSIVE 

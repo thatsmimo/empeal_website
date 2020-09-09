@@ -8,6 +8,7 @@ import OurTeam from "../screens/OurTeam";
 import Library from "../screens/Library";
 import Product from "../screens/Product";
 import Pricing from "../screens/Pricing";
+import Stories from "../screens/Stories";
 
 export default function MainRouter() {
   return (
@@ -20,6 +21,7 @@ export default function MainRouter() {
       <Route exact path="/library" component={Library}></Route>
       <Route exact path="/product" component={Product}></Route>
       <Route exact path="/pricing" component={Pricing}></Route>
+      <Route exact path="/stories" component={Stories}></Route>
     </Switch>
   );
 }
