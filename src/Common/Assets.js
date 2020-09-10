@@ -48,6 +48,10 @@ const Assets = {
         janeSad : require('../assets/images/jane-sad.svg'),
         angryIcon : require('../assets/images/angry-icon.png'),
         goalIcon : require('../assets/images/goal.png'),
+        integrationIcon : require('../assets/images/integration.png'),
+        personalisationIcon : require('../assets/images/personalisation.png'),
+        gamificationIcon : require('../assets/images/gamification.png'),
+        improvmantIcon : require('../assets/images/cont-improvment-icon.png'),
     }
 }
 

@@ -1,26 +1,74 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import {
+  Button,
+  Alert,
+  Container,
+  Row,
+  Col,
+  Form,
+  ListGroup,
+  Image,
+  Carousel,
+  Nav,
+  Tab,
+  Navbar,
+  NavDropdown,
+} from "react-bootstrap";
+import "../../App.css";
+import { Assets } from "../../Common";
 
-const Header = () => {
+const Header = ({ isHome=false,dummyText }) => {
   return (
-    <ul className="App-header">
-      <li>
-        <Link className="Title" to="/">
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link className="Title" to="/about">
-          About Us
-        </Link>
-      </li>
-      <li>
-        <Link className="Title" to="/login">
-          Login
-        </Link>
-      </li>
-    </ul>
+    <div className="_header-main">
+      <Container-fluid>
+        {/* Navbar Begin */}
+        <Navbar collapseOnSelect expand="lg" bg="" variant="">
+          <Navbar.Brand href="#home">
+            <div className="_logo">
+              <a href="/home">
+                <img src={Assets.images.logo} className="_logo" />
+                {/* Logo */}
+              </a>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          {!isHome ? (
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="ml-auto">
+                <div className="_navList">
+                  <Nav.Link href="/product">Product</Nav.Link>
+                </div>
+                <div className="_navList">
+                  <Nav.Link href="/about">Company</Nav.Link>
+                </div>
+                <div className="_navList">
+                  <Nav.Link href="/library">Library</Nav.Link>
+                </div>
+                <div className="_navList">
+                  <Nav.Link href="#">Contact</Nav.Link>
+                </div>
+                {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+              </NavDropdown> */}
+              </Nav>
+            </Navbar.Collapse>
+          ) : (
+            <div />
+          )}
+          <div className="_hdrUserDiv">
+            <a href="#" className="btn _btnCustom-2">
+              Sign In
+            </a>
+          </div>
+        </Navbar>
+        {/* Navbar End */}
+      </Container-fluid>
+    </div>
   );
 };
 

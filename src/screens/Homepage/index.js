@@ -21,6 +21,8 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./style.css";
 import "./";
 import { Assets } from "../../Common";
+import { Header } from "../../components";
+import { Footer } from "../../components";
 
 // const options = {
 //   items: 1,
@@ -38,42 +40,9 @@ export default class index extends React.Component {
   render() {
     return (
       <div className="_main _home">
-        {/***** Header : Begin ********/}
-        <div className="_header-main">
-          <Container-fluid>
-            {/* Navbar Begin */}
-            <Navbar collapseOnSelect expand="lg" bg="" variant="">
-              <Navbar.Brand href="#home">
-                <div className="_logo">
-                  <a href="/home">
-                    <img src={Assets.images.logo} className="_logo" />
-                    {/* Logo */}
-                  </a>
-                </div>
-              </Navbar.Brand>
-              <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-              <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ml-auto">
-                  <div className="_navList"><Nav.Link href="/product">Product</Nav.Link></div>
-                  <div className="_navList"><Nav.Link href="/about">Company</Nav.Link></div>
-                  <div className="_navList"><Nav.Link href="/library">Library</Nav.Link></div>
-                  <div className="_navList"><Nav.Link href="#">Contact</Nav.Link></div>
-                  {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                  </NavDropdown> */}
-                </Nav>               
-              </Navbar.Collapse>
-              <div className="_hdrUserDiv">
-                  <a href="" className="btn _btnCustom-2">Sign In</a>
-              </div>
-            </Navbar>
-            {/* Navbar End */}
-          </Container-fluid>
-        </div>
+      {/***** Header : Begin ********/}
+      <Header isHome={true}/>      
+        
 
         {/***** Banner : Begin ********/}
         <div className="_bannerOutter">
@@ -635,7 +604,7 @@ export default class index extends React.Component {
             </Row>
             <Tab.Container defaultActiveKey="first" className="_storyTab">
               <Row className="_abtRow">
-                <Col xs={12} md={4} lg={3}>
+                <Col xs={12} md={12} lg={3}>
                   <div className="_navPill-outter">
                     <Nav variant="pills" className="flex-column">
                       <Nav.Item>
@@ -706,7 +675,7 @@ export default class index extends React.Component {
                     </Nav>
                   </div>
                 </Col>
-                <Col xs={12} md={8} lg={9}>
+                <Col xs={12} md={12} lg={9}>
                   <div class="_tabCont-outter">
                     <Tab.Content>
                       {/* Tab Pane : Begin  */}
@@ -949,7 +918,7 @@ export default class index extends React.Component {
           <div className="_testimonialSection-inner">
             <Container>
               <Row className="_testRow _aI-center">
-                <Col xs={12} md={4} lg={4} className="_testColRight">
+                <Col xs={12} md={12} lg={4} className="_testColRight">
                   <div className="_abtBlock">
                     <div class="_titleDiv">
                       <h2 className="_title">Testimonials</h2>
@@ -963,7 +932,7 @@ export default class index extends React.Component {
                     </div>
                   </div>
                 </Col>
-                <Col xs={12} md={8} lg={8} className="_testColLeft">
+                <Col xs={12} md={12} lg={8} className="_testColLeft">
                   <div class="_testOutter">
                     <OwlCarousel items={3} className="owl-theme" margin={25}>
                       <div className="_testDiv">
@@ -1331,126 +1300,7 @@ export default class index extends React.Component {
         </div>
 
         {/* Footer : Begin             */}
-        <footer className="_footer">
-          <div className="_footerMain">
-            <Container>
-              <Row className="_fm-row">
-                <Col md={12} lg={4}>
-                  <div className="_f-logo">
-                    <a href="#">
-                      <img src={Assets.images.logo} className="_logo" />
-                    </a>
-                    <p>
-                      Wind of Change Total Wellbeing Solutions Ltd. <br />
-                      Dogpatch Labs The CHQ Building, Custom House Quay, Dublin
-                      1
-                    </p>
-                  </div>
-                  <p>
-                    <a href="#" className="_dark-1">
-                      <strong>+353-879945928 (Ireland) </strong>
-                    </a>
-                    <br />
-                    <a href="#" className="_dark-1">
-                      <strong>+91-9836179466 (India)</strong>
-                    </a>
-                  </p>
-                  <p>
-                    <a href="#" className="_dark-1">
-                      <strong>info@empeal.com</strong>
-                    </a>
-                    <br />
-                  </p>
-                </Col>
-                <Col md={12} lg={8}>
-                  <Row>
-                    <Col md={4} lg={4}>
-                      <h3 className="_title-3">Services</h3>
-                      <ul className="_f-lists">
-                        <li>
-                          <a href="#">Design</a>
-                        </li>
-                        <li>
-                          <a href="#">Social Media</a>
-                        </li>
-                        <li>
-                          <a href="#">Develop</a>
-                        </li>
-                      </ul>
-                    </Col>
-                    <Col md={4} lg={4}>
-                      <h3 className="_title-3">Information</h3>
-                      <ul className="_f-lists">
-                        <li>
-                          <a href="/library">Blog</a>
-                        </li>
-                        <li>
-                          <a href="#">News</a>
-                        </li>
-                        <li>
-                          <a href="/about">About</a>
-                        </li>
-                      </ul>
-                    </Col>
-                    <Col md={4} lg={4}>
-                      <h3 className="_title-3">Contact Us</h3>
-                      <ul className="_f-lists">
-                        <li>
-                          <a href="#">Write to Us</a>
-                        </li>
-                        <li>
-                          <a href="#">Call to Us</a>
-                        </li>
-                        <li>
-                          <a href="#">Information</a>
-                        </li>
-                      </ul>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="_footerBtm">
-            <Container>
-              <Row className="_aI-center">
-                <Col md={12} lg={6}>
-                  <div className="">
-                    <p className="_white">© Copyright 2020 Empeal</p>
-                  </div>
-                </Col>
-                <Col md={12} lg={6}>
-                  <ul className="_socialLinks">
-                    <li>
-                      <a href="#">
-                        <Image
-                          src={require("../../assets/images/facebook.png")}
-                          className="img-fluid"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image
-                          src={require("../../assets/images/twitter.png")}
-                          className="img-fluid"
-                        />
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <Image
-                          src={require("../../assets/images/instagram.png")}
-                          className="img-fluid"
-                        />
-                      </a>
-                    </li>
-                  </ul>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-        </footer>
+        <Footer />
       </div>
     );
   }

@@ -1,0 +1,15 @@
+.App-header {
+  background-color: gray;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Title {
+  color: white;
+  margin-right: 15vh;
+}
