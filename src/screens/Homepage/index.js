@@ -21,6 +21,10 @@ import { Header, Footer, FullPageLoader } from "../../components";
 import Api from "../../js/service/api";
 
 function HomePage() {
+  const options = {
+    items: 4,
+};
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 

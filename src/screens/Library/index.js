@@ -35,7 +35,7 @@ function Library() {
             <div className="_librarySection-1 _darkSky  _c-padding">
               <Container>  
                 <Row className="_textCard-row">
-                    <Col md={6} lg={5} className="">
+                    <Col md={12} lg={5} className="">
                       <div class="_titleDiv _mB-0">
                         <h2 className="_titleLarge _white">Library</h2>  
                         <p className="_title_txt _white">Catch the latest news and articles from Empeal.</p>                  
@@ -55,7 +55,7 @@ function Library() {
                         </li>
                       </ul>
                     </Col>
-                    <Col md={6} lg={7} className="">
+                    <Col md={12} lg={7} className="">
                       <div className="">
                         <div class="_titleDiv text-center">
                           <h2 className="_title _white">Subscribe to read more</h2>

@@ -71,81 +71,81 @@ function Pricing() {
                       <tbody>
                         <tr>
                           <td className="_t-subTitle">User Health Profile</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Organization Goal Setting/Revising</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Monthly Challenges</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Integration with Wearables</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Leader-board Reporting</td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Employee Engagement Tracking</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Wellness Footprint Reporting</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Nutrition Tracking</td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Activity Tracking</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Personalised Protocol Delivery</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">User Level Analytics</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Organization Level Analytics</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle">Image & Voice Recognition</td>
-                          <td><span className=""><Image src={Assets.images.wrong} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
-                          <td><span className=""><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.wrong} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
+                          <td><span className="_tickIcon"><Image src={Assets.images.right} className="" /></span></td>
                         </tr>
                         <tr>
                           <td className="_t-subTitle"></td>
