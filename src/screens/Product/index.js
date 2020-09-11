@@ -36,7 +36,7 @@ function Product() {
         <div className="_productSection-1 _white-bg">
           <Container>
             <Row className="_textCard-row _aI-center">
-              <Col md={6} lg={6} className="">
+              <Col md={12} lg={6} className="">
                 <div class="_mobDiv">
                   <img
                     className=""
@@ -45,7 +45,7 @@ function Product() {
                   />
                 </div>
               </Col>
-              <Col md={6} lg={6} className="">
+              <Col md={12} lg={6} className="">
                 <div className="_proCont">
                   <div class="_titleDiv">
                     <h2 className="_titleLarge">
@@ -87,7 +87,7 @@ function Product() {
         <div className="_productSection-2 _c-padding  _pB-0">
           <Container>
             <Row className="_proSec2-row">
-              <Col md={6} lg={6} className="_proSec2-col">
+              <Col md={12} lg={6} className="_proSec2-col">
                 <div class="_titleDiv">
                   <h2 className="_titleLarge _white">
                     <span className="_yellow">SaaS</span> health risk management
@@ -101,7 +101,7 @@ function Product() {
                   </p>
                 </div>
               </Col>
-              <Col md={6} lg={6} className="_proSec2-col">
+              <Col md={12} lg={6} className="_proSec2-col">
                 <ListGroup className="_customListGrp-1">
                   <ListGroup.Item>
                     <span className="_iconHolder">
@@ -203,7 +203,7 @@ function Product() {
               <Accordion defaultActiveKey="0">
                 <Row className="">
                   {/* Col : Begin */}
-                  <Col md={6} lg={6} className="_acCard-col">
+                  <Col md={12} lg={6} className="_acCard-col">
                     <Card>
                       <Accordion.Toggle as={Card.Header} eventKey="0">
                         <p className="_title-3">Integrated</p>
@@ -246,7 +246,7 @@ function Product() {
                   </Col>
                   {/* Col : End */}
                   {/* Col : Begin */}
-                  <Col md={6} lg={6} className="_acCard-col">
+                  <Col md={12} lg={6} className="_acCard-col">
                     <Card>
                       <Accordion.Toggle as={Card.Header} eventKey="4">
                         <p className="_title-3">Cross-Platform</p>
@@ -298,7 +298,7 @@ function Product() {
           <Container>
             <Row className="">
               {/* Col : Begin */}
-              <Col md={8} lg={7} className="mx-auto">
+              <Col md={12} lg={7} className="mx-auto">
                 <div class="_titleDiv text-center">
                   <h2 className="_title">View Pricing</h2>
                   <p class="_title_txt _fW-500">

@@ -54,6 +54,9 @@ p {
   line-height: 30px;
   font-weight: 400;
 }
+p:last-child {
+  margin-bottom: 0;
+}
 ul,
 li {
   padding: 0;
@@ -396,7 +399,7 @@ Header Section
 ._hdrUserDiv ._btnCustom-2 {
   min-width: 125px;
 }
-._home ._hdrUserDiv {
+._home ._hdrUserDiv, ._home .navbar-toggler {
   display: none;
 }
 /************************* 
@@ -971,7 +974,7 @@ Blog Section
   margin-bottom: -30px;
 }
 ._blogCol {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
 }
 ._blogTitle {
   font-size: 24px;
@@ -1162,6 +1165,9 @@ Footer Section
 }
 ._f-lists li a {
   color: #999999;
+}
+._f-lists li a:hover {
+  color: #31567c;
 }
 ._footerBtm {
   padding: 25px 0;
@@ -1675,7 +1681,7 @@ Library Page
 *************************/
 ._librarySection-1 {
   position: relative;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 ._librarySection-1 ._textCard-row {
   align-items: center;
@@ -1702,7 +1708,9 @@ Library Page
   opacity: 0.5;
   z-index: -1;
 }
-
+._infoLists:not(:first-child) {
+  padding-top: 20px;
+}
 ._infoList {
   color: #fff;
   display: block;
@@ -1716,7 +1724,7 @@ Library Page
 ._infoList p {
   color: #fff;
 }
-._infoTxts {
+._infoList ._infoTxts {
   margin-bottom: 5px;
 }
 ._infoTxts span {
@@ -1800,6 +1808,7 @@ Product
   background-repeat: no-repeat;
   background-position: bottom right;
   bottom: 0;
+  background-size: 100%;
 }
 ._proCont {
   padding-left: 100px;
@@ -2097,8 +2106,15 @@ RESPONSIVE
   }
 }
 @media (max-width: 1480px) {
+  ._titleLarge {
+    font-size: 55px;
+    line-height: 60px;
+  }
   ._title {
     font-size: 40px;
+  }
+  ._title-3 {
+    font-size: 22px;
   }
   ._titleTxt {
     font-size: 18px;
@@ -2161,6 +2177,40 @@ RESPONSIVE
     font-size: 20px;
     line-height: 28px;
   }
+  ._table ._title-3 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  ._table thead th,
+  ._table tbody td {
+    padding: 15px 15px;
+  }
+  ._table tbody td ._tickIcon img {
+    max-width: 20px;
+  }
+  ._pricingPage ._l-btm-hill {
+    margin-top: -70px;
+  }
+  ._pricingPage ._absImg img {
+    max-width: 110px;
+  }
+  ._table thead th:first-child,
+  ._table tbody td:first-child {
+    min-width: 200px;
+  }
+  ._proCont {
+    padding-left: 50px;
+    padding-right: 45px;
+  }
+  ._acCard-col .card {
+    margin-bottom: 20px;
+  }
+  ._footerBtm {
+    padding: 20px 0;
+  }
+  ._productSection-1 {
+    padding: 26px 0 115px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2171,6 +2221,18 @@ RESPONSIVE
   ._titleLarge {
     font-size: 45px;
     line-height: 50px;
+  }
+  .navbar-nav {
+    margin-right: 20px !important;
+  }
+  .navbar-nav ._navList {
+    padding: 0 10px;
+  }
+  .navbar-nav a {
+    font-size: 18px;
+  }
+  ._header-main {
+    padding: 10px 0;
   }
   ._fLabel {
     margin-bottom: 0;
@@ -2247,6 +2309,10 @@ RESPONSIVE
   ._footerBtm {
     padding: 15px 0;
   }
+  ._proCont {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2257,9 +2323,70 @@ RESPONSIVE
 }
 
 @media (max-width: 991px) {
+  ._topGap {
+    padding-top: 70px;
+  }
   ._title-3 {
     font-size: 20px;
     line-height: 25px;
+  }
+  /* Header  */
+  .navbar-nav {
+    margin-right: 0px !important;
+  }
+  ._hdrUserDiv {
+    margin-right: 65px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: 0;
+  }
+   .navbar-collapse {
+    background: #31567c;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    left: 0;
+    top: 0;
+    display: block !important;
+    top: 0 !important;
+    left: 0;
+    transition: transform 0.5s;
+    transform: translateX(-115%);
+    z-index: 9;
+  }
+  .navbar .navbar-toggler .navbar-toggler-icon {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-image: url(assets/images/close-menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .navbar .navbar-toggler.collapsed  .navbar-toggler-icon{
+    background-image: url(assets/images/menu.png);
+  }
+  .navbar-toggler-icon:focus,
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-collapse.show {
+    transform: translateX(0);
+  }
+  .navbar-nav .nav-link {
+    color: #fff;
+  }
+  .navbar-nav ._navList {
+    padding: 0;
+  }
+  ._header-main .navbar-nav .nav-link {
+    font-size: 20px;
+    padding: 15px;
+    border-bottom: 1px dashed #ffffff6e;
   }
   ._bannerCont ._titleLarge {
     font-size: 45px;
@@ -2335,10 +2462,42 @@ RESPONSIVE
     max-width: 100%;
     margin-top: 60px;
   }
-  .navbar-toggler{
+  .navbar-toggler {
     position: absolute;
-    right: 0;
-    background-color: #000;
+    right: 0;   
+    padding: 0;
+    right: 15px;
+    top: 10px;
+  }
+  ._mobDiv {
+    text-align: center;
+
+    margin-top: -60px;
+    margin-bottom: -75px;
+  }
+  ._proSec2-col {
+    margin-bottom: 15px;
+  }
+  ._proBtmDiv {
+    margin-top: -30px;
+  }
+  ._takeQuiz ._btnBlock {
+    text-align: left;
+    padding-left: 125px;
+    margin-top: 15px;
+  }
+  ._takeQuiz ._btnBlock .btn {
+    margin-left: 0;
+    float: none !important;
+  }
+  ._menConv {
+    bottom: 20px;
+  }
+  ._menConv img {
+    max-width: 100px;
+  }
+  ._infoLists {
+    margin-bottom: 30px;
   }
 }
 
@@ -2346,6 +2505,10 @@ RESPONSIVE
   ._c-padding {
     padding-top: 45px;
     padding-bottom: 45px;
+  }
+  ._titleLarge {
+    font-size: 35px;
+    line-height: 45px;
   }
   ._title {
     font-size: 25px;
@@ -2355,12 +2518,31 @@ RESPONSIVE
     font-size: 18px;
     line-height: 25px;
   }
+  ._customBtn-1 {
+    height: 40px;
+    min-width: 145px;
+    font-size: 16px !important;
+    padding: 5px 15px !important;
+    line-height: 26px !important;
+  }
+  ._btnCustom-2 {
+    height: 40px;
+    font-size: 16px !important;
+    line-height: 25px !important;
+    padding: 5px 10px;
+  }
+  ._tab3Nav {
+    margin-bottom: 25px;
+  }
   ._header-main .navbar {
     padding: 0 15px;
   }
   ._bannerCont ._titleLarge {
     font-size: 35px;
     line-height: 45px;
+  }
+  ._bannerRight {
+    display: none;
   }
   ._footerMain .row .row > div {
     flex: 0 0 100%;
@@ -2385,7 +2567,7 @@ RESPONSIVE
     overflow-x: scroll;
   }
   ._tab3Nav .nav {
-    width: 590px;
+    width: 575px;
   }
   ._h-textBlock ._numCircle {
     position: relative;
@@ -2502,29 +2684,105 @@ RESPONSIVE
   ._title ._absIcon img {
     width: 30px;
   }
-  ._lapMobBox ._absImg{
+  ._lapMobBox ._absImg {
     display: none;
   }
   ._lapMobBox {
     margin-bottom: 30px;
   }
-  ._content p._contCat{
+  ._content p._contCat {
     margin-bottom: 5px;
     font-size: 14px;
     line-height: 20px;
-  } 
-  ._bA-div{
+  }
+  ._bA-div {
     margin-bottom: 30px;
   }
   ._content ._btnCustom-2 {
     margin-top: 10px;
-}
+  }
+  ._table ._title-3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  ._table thead th,
+  ._table tbody td {
+    padding: 10px 10px;
+  }
+  ._table tbody td ._tickIcon img {
+    max-width: 15px;
+  }
+  ._hdrUserDiv ._btnCustom-2 {
+    min-width: 115px;
+  }
+  ._tab3Pane-inner ._title-3 {
+    margin-bottom: 10px;
+  }
+  ._mobDiv {
+    text-align: center;
+    margin-top: -35px;
+    margin-bottom: -50px;
+  }
+  ._customListGrp-1 .list-group-item ._iconHolder {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  ._customListGrp-1 .list-group-item ._iconHolder ~ ._listCont {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  ._accordianContainer .card-header {
+    padding: 10px 15px 9px;
+    padding-right: 35px;
+  }
+  ._accordianContainer .card-header::before {
+    right: 7px;
+    top: 10px;
+    background-size: 14px;
+  }
+  ._acCard-col .card {
+    margin-bottom: 15px;
+  }
+  ._takeQuiz ._btnBlock {
+    padding-left: 0;
+  }
+  ._productSection-1 {
+    padding: 15px 0 70px;
+  }
+  ._footerMain ._title-3 {
+    margin-bottom: 10px;
+    padding-top: 0;
+  }
+  ._f-lists li {
+    padding-bottom: 10px;
+  }
+  ._menConv img {
+    max-width: 75px;
+  }
+  ._libraryNavCont {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 630px) {
+  ._l-btm-hill {
+    margin-top: 65px;
+  }
+  ._menConv {
+    bottom: 0px;
+  }
+  ._libraryNavCont .nav-pills .nav-link {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
 }
 
 @media (max-width: 480px) {
+  ._titleLarge {
+    font-size: 30px;
+    line-height: 35px;
+  }
   ._c-padding {
     padding-top: 35px;
     padding-top: 35px;
@@ -2533,5 +2791,11 @@ RESPONSIVE
     position: absolute;
     bottom: -45px;
     right: -23px;
+  }
+  ._pricingPage ._absImg {
+    bottom: 0;
+  }
+  ._hdrUserDiv ._btnCustom-2 {
+    min-width: 95px;
   }
 }
