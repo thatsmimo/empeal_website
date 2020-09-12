@@ -1,24 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import {
-  Button,
-  Alert,
-  Container,
-  Row,
-  Col,
-  Form,
-  ListGroup,
-  Image,
-  Carousel,
-  Nav,
-  Tab,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import "../../App.css";
 import { Assets } from "../../Common";
 
-const Header = ({ isHome = false, dummyText }) => {
+const Header = ({ isHome = false }) => {
   return (
     <div className="_header-main">
       <Container-fluid>
@@ -27,7 +12,7 @@ const Header = ({ isHome = false, dummyText }) => {
           <Navbar.Brand href="#home">
             <div className="_logo">
               <a href="/home">
-                <img src={Assets.images.logo} className="_logo" />
+                <img alt="logo" src={Assets.images.logo} className="_logo" />
                 {/* Logo */}
               </a>
             </div>
