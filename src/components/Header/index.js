@@ -18,7 +18,7 @@ import {
 import "../../App.css";
 import { Assets } from "../../Common";
 
-const Header = ({ isHome=false,dummyText }) => {
+const Header = ({ isHome = false, dummyText }) => {
   return (
     <div className="_header-main">
       <Container-fluid>
@@ -34,37 +34,39 @@ const Header = ({ isHome=false,dummyText }) => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           {!isHome ? (
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="ml-auto">
-                <div className="_navList">
-                  <Nav.Link href="/product">Product</Nav.Link>
-                </div>
-                <div className="_navList">
-                  <Nav.Link href="/about">Company</Nav.Link>
-                </div>
-                <div className="_navList">
-                  <Nav.Link href="/library">Library</Nav.Link>
-                </div>
-                <div className="_navList">
-                  <Nav.Link href="#">Contact</Nav.Link>
-                </div>
-                {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+            <div className="_navright-section">
+              <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="ml-auto">
+                  <div className="_navList">
+                    <Nav.Link href="/product">Product</Nav.Link>
+                  </div>
+                  <div className="_navList">
+                    <Nav.Link href="/about">Company</Nav.Link>
+                  </div>
+                  <div className="_navList">
+                    <Nav.Link href="/library">Library</Nav.Link>
+                  </div>
+                  <div className="_navList">
+                    <Nav.Link href="#">Contact</Nav.Link>
+                  </div>
+                  {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
               </NavDropdown> */}
-              </Nav>
-            </Navbar.Collapse>
+                </Nav>
+              </Navbar.Collapse>
+              <div className="_hdrUserDiv">
+                <a href="#" className="btn _btnCustom-2">
+                  Sign In
+                </a>
+              </div>
+            </div>
           ) : (
             <div />
           )}
-          <div className="_hdrUserDiv">
-            <a href="#" className="btn _btnCustom-2">
-              Sign In
-            </a>
-          </div>
         </Navbar>
         {/* Navbar End */}
       </Container-fluid>

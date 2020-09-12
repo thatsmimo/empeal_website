@@ -1,0 +1,1156 @@
+{
+	"info": {
+		"_postman_id": "fd6c1d01-4073-4098-a60a-715ece39b8a3",
+		"name": "empeal-website",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "blog",
+			"item": [
+				{
+					"name": "Blog Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog_type']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'blog_type']"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "responce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog_type']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'blog_type']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "811"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-2bj87"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 07:32:26 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 9,\n    \"query\": \"*[_type == 'blog_type']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-08-26T06:41:40Z\",\n            \"_id\": \"401cdede-274d-4e62-8bfb-ce9fae99bc2f\",\n            \"_rev\": \"OPqgp4qO72bsfal1EdAuaW\",\n            \"_type\": \"blog_type\",\n            \"_updatedAt\": \"2020-08-26T06:41:40Z\",\n            \"name\": \"Nutrition\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:42:12Z\",\n            \"_id\": \"80af41a6-96a9-48da-8c16-b88d9f1cb300\",\n            \"_rev\": \"OPqgp4qO72bsfal1EdAvq6\",\n            \"_type\": \"blog_type\",\n            \"_updatedAt\": \"2020-08-26T06:42:12Z\",\n            \"name\": \"Technology\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:42:36Z\",\n            \"_id\": \"882c86db-be2e-47c5-b6d3-d583a9314571\",\n            \"_rev\": \"OPqgp4qO72bsfal1EdAxPy\",\n            \"_type\": \"blog_type\",\n            \"_updatedAt\": \"2020-08-26T06:42:36Z\",\n            \"name\": \"Business\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:41:50Z\",\n            \"_id\": \"ab857aaa-aa71-4c2c-8bb9-df1dadbbf38b\",\n            \"_rev\": \"lhBqnAOe1VMAVstZZ1h5Y6\",\n            \"_type\": \"blog_type\",\n            \"_updatedAt\": \"2020-08-26T06:41:50Z\",\n            \"name\": \"Fitness\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Blog Author",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog_author']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'blog_author']"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "responce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog_author']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'blog_author']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-p4q2w"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 06:58:51 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 7,\n    \"query\": \"*[_type == 'blog_author']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-09-10T06:58:42Z\",\n            \"_id\": \"7ee22aea-82dd-4bf2-9eb8-4558b22d5629\",\n            \"_rev\": \"qWo3PJT29fz1IyIwC9xJ43\",\n            \"_type\": \"blog_author\",\n            \"_updatedAt\": \"2020-09-10T06:58:42Z\",\n            \"name\": \"Uday\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "responce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog_author']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'blog_author']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-p4q2w"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 07:39:22 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 9,\n    \"query\": \"*[_type == 'blog_author']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-09-10T06:58:42Z\",\n            \"_id\": \"7ee22aea-82dd-4bf2-9eb8-4558b22d5629\",\n            \"_rev\": \"qWo3PJT29fz1IyIwC9xJ43\",\n            \"_type\": \"blog_author\",\n            \"_updatedAt\": \"2020-09-10T06:58:42Z\",\n            \"name\": \"Uday\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Blog ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'blog']"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "responce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'blog']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'blog']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "613"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-p4q2w"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 07:01:20 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 10,\n    \"query\": \"*[_type == 'blog']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-09-10T07:00:47Z\",\n            \"_id\": \"02aed32f-fa6c-4278-a364-e360921e38f9\",\n            \"_rev\": \"TN4CAf00mDXELwwLef3lUd\",\n            \"_type\": \"blog\",\n            \"_updatedAt\": \"2020-09-10T07:00:47Z\",\n            \"author\": {\n                \"_ref\": \"7ee22aea-82dd-4bf2-9eb8-4558b22d5629\",\n                \"_type\": \"reference\"\n            },\n            \"blog_body\": [\n                {\n                    \"_key\": \"871f3bf13595\",\n                    \"_type\": \"block\",\n                    \"children\": [\n                        {\n                            \"_key\": \"871f3bf135950\",\n                            \"_type\": \"span\",\n                            \"marks\": [],\n                            \"text\": \"Hi this is the test blog\"\n                        }\n                    ],\n                    \"markDefs\": [],\n                    \"style\": \"normal\"\n                }\n            ],\n            \"blog_date\": \"2020-09-09T18:30:00.000Z\",\n            \"blog_type\": {\n                \"_ref\": \"80af41a6-96a9-48da-8c16-b88d9f1cb300\",\n                \"_type\": \"reference\"\n            },\n            \"title\": \"New Blog\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "Company Story",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'company_story']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'company_story']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Team's Designation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'designation']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'designation']"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reponce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'designation']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'designation']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "812"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-p4q2w"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 07:38:43 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 13,\n    \"query\": \"*[_type == 'designation']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-08-26T06:20:23Z\",\n            \"_id\": \"0215508d-483c-47ea-88ba-72de458b1893\",\n            \"_rev\": \"Zb5d3xpBe4UWo3cCLvbJCL\",\n            \"_type\": \"designation\",\n            \"_updatedAt\": \"2020-08-26T06:27:39Z\",\n            \"name\": \"CEO\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:26:49Z\",\n            \"_id\": \"0dfeb971-4d97-4fd7-97f7-13cef96f9b87\",\n            \"_rev\": \"lhBqnAOe1VMAVstZZ1g9Dg\",\n            \"_type\": \"designation\",\n            \"_updatedAt\": \"2020-08-26T06:27:44Z\",\n            \"name\": \"Developer\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:15:50Z\",\n            \"_id\": \"6523f072-e850-45b6-86f7-501696a2ec93\",\n            \"_rev\": \"OPqgp4qO72bsfal1EdAQJ4\",\n            \"_type\": \"designation\",\n            \"_updatedAt\": \"2020-08-26T06:27:35Z\",\n            \"name\": \"CTO\"\n        },\n        {\n            \"_createdAt\": \"2020-08-26T06:19:45Z\",\n            \"_id\": \"db9c4e8c-93e6-4d74-9813-a318d70639d5\",\n            \"_rev\": \"lhBqnAOe1VMAVstZZ1g7qw\",\n            \"_type\": \"designation\",\n            \"_updatedAt\": \"2020-08-26T06:27:28Z\",\n            \"name\": \"Team Lead\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'teams']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'teams']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "footer",
+			"item": [
+				{
+					"name": "footer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'footer']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'footer']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "header",
+			"item": [
+				{
+					"name": "navlink",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'navlink']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'navlink']"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "responce",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'navlink']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'navlink']"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "470"
+								},
+								{
+									"key": "X-Sanity-Shard",
+									"value": "gcp-eu-w1-01-prod-1011"
+								},
+								{
+									"key": "X-Served-By",
+									"value": "gradient-query-78b5d48c6c-lkz88"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 10 Sep 2020 07:33:09 GMT"
+								},
+								{
+									"key": "vary",
+									"value": "Origin"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph"
+								},
+								{
+									"key": "xkey",
+									"value": "project-b75f36ph-production"
+								},
+								{
+									"key": "Via",
+									"value": "1.1 google"
+								},
+								{
+									"key": "Alt-Svc",
+									"value": "clear"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"ms\": 40,\n    \"query\": \"*[_type == 'navlink']\",\n    \"result\": [\n        {\n            \"_createdAt\": \"2020-08-24T07:22:42Z\",\n            \"_id\": \"8b31aa3d-5681-4ad9-98df-6a6672072f83\",\n            \"_rev\": \"4j5Pa2Lqh5267RdnTcHj8n\",\n            \"_type\": \"navlink\",\n            \"_updatedAt\": \"2020-08-24T07:22:42Z\",\n            \"link\": [\n                {\n                    \"_key\": \"b68ddd0aac71\",\n                    \"_type\": \"slug\",\n                    \"current\": \"/product\"\n                },\n                {\n                    \"_key\": \"ee805260e9b7\",\n                    \"_type\": \"slug\",\n                    \"current\": \"/company\"\n                },\n                {\n                    \"_key\": \"5009db776186\",\n                    \"_type\": \"slug\",\n                    \"current\": \"/library\"\n                },\n                {\n                    \"_key\": \"938d8794dced\",\n                    \"_type\": \"slug\",\n                    \"current\": \"/contact\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "homepage",
+			"item": [
+				{
+					"name": "story",
+					"item": [
+						{
+							"name": "employee story",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'employee_story']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'employee_story']"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "organsiation_story",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'organsiation_story']",
+									"protocol": "https",
+									"host": [
+										"b75f36ph",
+										"api",
+										"sanity",
+										"io"
+									],
+									"path": [
+										"v1",
+										"data",
+										"query",
+										"production"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "*[_type == 'organsiation_story']"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Introduction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'introduction']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'introduction']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mobile content",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'mobile_content']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'mobile_content']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "award",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'award']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'award']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tell about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'tell_about']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'tell_about']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "uptodate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'uptodate']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'uptodate']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "pricing",
+			"item": [
+				{
+					"name": "pricing_plans",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'pricing_plans']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'pricing_plans']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'price']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'price']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product information",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'product_info']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'product_info']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product description",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'product_description']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'product_description']"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product features",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'product_features']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'product_features']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "testimonials",
+			"item": [
+				{
+					"name": "testimonials",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://b75f36ph.api.sanity.io/v1/data/query/production?query=*[_type == 'testimonials']",
+							"protocol": "https",
+							"host": [
+								"b75f36ph",
+								"api",
+								"sanity",
+								"io"
+							],
+							"path": [
+								"v1",
+								"data",
+								"query",
+								"production"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "*[_type == 'testimonials']"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
