@@ -1,10 +1,18 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/** The href attribute requires a valid value to be accessible.  */
+
 import React, { useState } from "react";
 import { Button, Container, Row, Col, Form, Image } from "react-bootstrap";
 import "../../screens/Homepage/style.css";
 import { Assets } from "../../Common";
+import {
+  homeTellUsAboutCardItemsArr,
+  homeTellUsAboutRadioItemsArr,
+} from "../../utils";
 
 const HomeTellUsAbout = ({ tellAboutData }) => {
   const [tellAboutPos, setTellAboutPos] = useState(0);
+  //   const [selectedRadioPos,setSelectedRadioPos] =
   const [selectedBoxPos, setSelectedBoxPos] = useState(null);
 
   const ChooseBox = () => (
@@ -30,34 +38,26 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
 
         <div className="_careerOptionBox">
           <div className="_careerOption">
-            {/* Form Begins */}
             <Form>
-              {/* Row : Begin */}
               <div className="_fRow">
-                {/* Col : Begin */}
-                {["", ""].map((element, index) => (
-                  <div className="_fCol">
-                    <Form.Group
-                      controlId="formBasicCheckbox"
-                      // onClick={() => setSelectedBoxPos(() => 0)}
-                    >
+                {homeTellUsAboutCardItemsArr.map((element, index) => (
+                  <div key={index} className="_fCol">
+                    <Form.Group controlId="formBasicCheckbox">
                       <label className="_fLabel">
                         <input
                           type="radio"
                           name="position"
-                          onClick={() => setSelectedBoxPos(0)}
+                          onClick={() => setSelectedBoxPos(index)}
+                          checked={selectedBoxPos === index}
                         />
                         <span className="_fSpan">
                           <span className="_checkDiv">
                             <span className="_checkDiv-tick"></span>
                             <span className="_checkDiv-icon">
-                              <Image
-                                src={require("../../assets/images/Health_icon_red.png")}
-                                className=""
-                              />
+                              <Image src={element.icon} className="" />
                             </span>
                             <span className="_checkDiv-txt">
-                              Health Service
+                              {element.name}
                             </span>
                           </span>
                         </span>
@@ -65,115 +65,14 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
                     </Form.Group>
                   </div>
                 ))}
-
-                {/* Col : End */}
-                {/* Col : Begin */}
-
-                <div className="_fCol">
-                  <Form.Group controlId="formBasicCheckbox">
-                    <label className="_fLabel">
-                      <input
-                        type="radio"
-                        name="position"
-                        onClick={() => setSelectedBoxPos(1)}
-                      />
-                      <span className="_fSpan">
-                        <span className="_checkDiv">
-                          <span className="_checkDiv-tick"></span>
-                          <span className="_checkDiv-icon">
-                            <Image
-                              src={require("../../assets/images/np-building.png")}
-                              className=""
-                            />
-                          </span>
-                          <span className="_checkDiv-txt">Organization</span>
-                        </span>
-                      </span>
-                    </label>
-                  </Form.Group>
-                </div>
-                {/* Col : End */}
-                {/* Col : Begin */}
-                <div className="_fCol">
-                  <Form.Group controlId="formBasicCheckbox">
-                    <label className="_fLabel">
-                      <input
-                        type="radio"
-                        name="position"
-                        onClick={() => setSelectedBoxPos(2)}
-                      />
-                      <span className="_fSpan">
-                        <span className="_checkDiv">
-                          <span className="_checkDiv-tick"></span>
-                          <span className="_checkDiv-icon">
-                            <Image
-                              src={require("../../assets/images/np_employee.png")}
-                              className=""
-                            />
-                          </span>
-                          <span className="_checkDiv-txt">Employee</span>
-                        </span>
-                      </span>
-                    </label>
-                  </Form.Group>
-                </div>
-                {/* Col : End */}
-                {/* Col : Begin */}
-                <div className="_fCol">
-                  <Form.Group controlId="formBasicCheckbox">
-                    <label className="_fLabel">
-                      <input
-                        type="radio"
-                        name="position"
-                        onClick={() => setSelectedBoxPos(3)}
-                      />
-                      <span className="_fSpan">
-                        <span className="_checkDiv">
-                          <span className="_checkDiv-tick"></span>
-                          <span className="_checkDiv-icon">
-                            <Image
-                              src={require("../../assets/images/np_human-resources.png")}
-                              className=""
-                            />
-                          </span>
-                          <span className="_checkDiv-txt">HR</span>
-                        </span>
-                      </span>
-                    </label>
-                  </Form.Group>
-                </div>
-                {/* Col : End */}
-                {/* Col : Begin */}
-                <div className="_fCol">
-                  <Form.Group controlId="formBasicCheckbox">
-                    <label className="_fLabel">
-                      <input
-                        type="radio"
-                        name="position"
-                        onClick={() => setSelectedBoxPos(4)}
-                      />
-                      <span className="_fSpan">
-                        <span className="_checkDiv">
-                          <span className="_checkDiv-tick"></span>
-                          <span className="_checkDiv-icon">
-                            <Image
-                              src={require("../../assets/images/np_health-insurance.png")}
-                              className=""
-                            />
-                          </span>
-                          <span className="_checkDiv-txt">Insurance</span>
-                        </span>
-                      </span>
-                    </label>
-                  </Form.Group>
-                </div>
-                {/* Col : End */}
               </div>
-              {/* Row : End */}
               <div className="text-center">
                 <Button
-                  //   type="submit" inactive
-                  className="_customBtn-1" // TODO: dynamic on click
+                  className={
+                    selectedBoxPos == null
+                      ? "_customBtn-1 inactive"
+                      : "_customBtn-1"
+                  }
                   onClick={() => _handleFrwdBackwd("next")}
                 >
                   Next
@@ -228,46 +127,17 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
                 {/* Form Begins */}
                 <Form>
                   <div class="_radiobox-list _orgLists">
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" /> Employee Relation
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" /> Presenteeism
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" /> Disjointed EAP
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" /> Too Many Systems
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" checked="checked" /> Employee
-                        Engagement
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
-                    <div className="_orgList">
-                      <label class="_checkbox-label">
-                        <input type="checkbox" checked="checked" /> Remote Teams
-                        <span class="_chSpan"></span>
-                      </label>
-                    </div>
+                    {homeTellUsAboutRadioItemsArr.map((element, index) => (
+                      <div className="_orgList" key={index}>
+                        <label class="_checkbox-label">
+                          <input type="checkbox" />
+                          {element.name}
+                          <span class="_chSpan"></span>
+                        </label>
+                      </div>
+                    ))}
                   </div>
                 </Form>
-                {/* Form Ends */}
               </Col>
             </Row>
           </div>

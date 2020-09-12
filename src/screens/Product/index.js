@@ -1,34 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
-  Button,
-  Alert,
   Container,
   Row,
   Col,
-  Form,
   ListGroup,
   Image,
-  Carousel,
-  Nav,
-  Tab,
-  Navbar,
-  NavDropdown,
   Accordion,
   Card,
 } from "react-bootstrap";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./";
 import { Assets } from "../../Common";
-import { Header } from "../../components";
-import { Footer } from "../../components";
+import { Header, Footer, FullPageLoader } from "../../components";
+import Api from "../../js/service/api";
 
 function Product() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const allPromise = await Promise.all([
+      await Api.get("product_info"),
+      await Api.get("product_description"),
+      await Api.get("product_features"),
+    ]);
+    console.log("Product: ", allPromise);
+    setData(allPromise);
+    setLoading(false);
+  };
+
+  if (loading) {
+    return <FullPageLoader />;
+  }
   return (
     <div className="_main">
-      {/***** Header : Begin ********/}
-      <Header dummyText={"xyz"} />
+      <Header />
 
       {/* Story Section */}
       <div className="_productPage _topGap">
@@ -48,30 +56,30 @@ function Product() {
               <Col md={12} lg={6} className="">
                 <div className="_proCont">
                   <div class="_titleDiv">
-                    <h2 className="_titleLarge">
-                      A whole <br />
-                      new level
-                    </h2>
+                    <h2 className="_titleLarge">{data[0].result[0].title}</h2>
                     <p className="_txtLarge">
-                      Empeal aims to reduce health risks for individuals and
-                      organisations by using proactive interventions and
-                      continuous improvement through our unique algorithms.{" "}
+                      {data[0].result[0].body[0].children.map(
+                        (element, index) => (
+                          <a key={index}>{element.text}</a>
+                        )
+                      )}
                     </p>
                     <p className="_txtLarge">
-                      Our measurable metrics based on medical, nutrition,
-                      lifestyle, behaviour and individual goals data, help users
-                      and organisations understand their health footprint and
-                      act on it.
+                      {data[0].result[0].body[1].children.map(
+                        (element, index) => (
+                          <a key={index}>{element.text}</a>
+                        )
+                      )}
                     </p>
                   </div>
                   <div className="_b-btns">
-                    <a href="#" className="_appBtn">
+                    <a href={data[0].result[0].app_lik[0]} className="_appBtn">
                       <span>
                         <Image src={Assets.images.appStrore} className="" />
                       </span>{" "}
                       App Store
                     </a>
-                    <a href="#" className="_appBtn">
+                    <a href={data[0].result[0].app_lik[1]} className="_appBtn">
                       <span>
                         <Image src={Assets.images.googlePlay} className="" />
                       </span>{" "}
@@ -111,11 +119,11 @@ function Product() {
                       />
                     </span>
                     <div className="_listCont">
-                      <p className="_title-4 _white">Integration</p>
+                      <p className="_title-4 _white">
+                        {data[1].result[3].title}
+                      </p>
                       <p className="_white">
-                      Linking medical, nutrition, lifestyle, behaviour, personal goals 
-                      data from interactive questionnaires, wearables and other 
-                      integrated technologies, linking them to find effective solution.
+                        {data[1].result[3].description[0].children[0].text}
                       </p>
                     </div>
                   </ListGroup.Item>
@@ -127,11 +135,11 @@ function Product() {
                       />
                     </span>
                     <div className="_listCont">
-                      <p className="_title-4 _white">Personalisation</p>
+                      <p className="_title-4 _white">
+                        {data[1].result[2].title}
+                      </p>
                       <p className="_white">
-                      Unique algorithms based on Functional Medicine and WHO 
-                    models provide personalised health plans encompassing 
-                    nutrition, lifestyle and behavioural change.
+                        {data[1].result[2].description[0].children[0].text}
                       </p>
                     </div>
                   </ListGroup.Item>
@@ -143,9 +151,11 @@ function Product() {
                       />
                     </span>
                     <div className="_listCont">
-                      <p className="_title-4 _white">Gamification</p>
+                      <p className="_title-4 _white">
+                        {data[1].result[1].title}
+                      </p>
                       <p className="_white">
-                      Reward system and interactive dashboard for users to engage with the platform and other users.
+                        {data[1].result[1].description[0].children[0].text}
                       </p>
                     </div>
                   </ListGroup.Item>
@@ -157,12 +167,14 @@ function Product() {
                       />
                     </span>
                     <div className="_listCont">
-                      <p className="_title-4 _white">Continuous Improvement</p>
+                      <p className="_title-4 _white">
+                        {data[1].result[0].title}
+                      </p>
                       <p className="_white">
-                      Real time analytics linking your data shows continuous improvement to keep you motivated.
+                        {data[1].result[0].description[0].children[0].text}
                       </p>
                     </div>
-                  </ListGroup.Item>                  
+                  </ListGroup.Item>
                 </ListGroup>
               </Col>
             </Row>
@@ -202,92 +214,23 @@ function Product() {
             <div className="_accordianContainer">
               <Accordion defaultActiveKey="0">
                 <Row className="">
-                  {/* Col : Begin */}
                   <Col md={12} lg={6} className="_acCard-col">
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="0">
-                        <p className="_title-3">Integrated</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="0">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="1">
-                        <p className="_title-3">Intelligent</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="1">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="2">
-                        <p className="_title-3">Innovative</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="2">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
+                    {data[2].result.map((element, index) => (
+                      <Card key={index}>
+                        <Accordion.Toggle
+                          as={Card.Header}
+                          eventKey={index + ""}
+                        >
+                          <p className="_title-3">{element.title}</p>
+                        </Accordion.Toggle>
+                        <Accordion.Collapse eventKey={index + ""}>
+                          <Card.Body>
+                            {element.body[0].children[0].text}
+                          </Card.Body>
+                        </Accordion.Collapse>
+                      </Card>
+                    ))}
                   </Col>
-                  {/* Col : End */}
-                  {/* Col : Begin */}
-                  <Col md={12} lg={6} className="_acCard-col">
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="4">
-                        <p className="_title-3">Cross-Platform</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="4">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="5">
-                        <p className="_title-3">Insightful</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="5">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                    <Card>
-                      <Accordion.Toggle as={Card.Header} eventKey="6">
-                        <p className="_title-3">Creative</p>
-                      </Accordion.Toggle>
-                      <Accordion.Collapse eventKey="6">
-                        <Card.Body>
-                          We integrate movement, sleep, heart rate and other
-                          data from wearables / mobile-devices into a single
-                          platform. We integrate that with Nutrition information
-                          to give users a 360 degree view of their health.
-                        </Card.Body>
-                      </Accordion.Collapse>
-                    </Card>
-                  </Col>
-                  {/* Col : End */}
                 </Row>
               </Accordion>
             </div>
