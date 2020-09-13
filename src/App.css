@@ -380,7 +380,10 @@ Header Section
 .navbar-nav {
   margin-right: 30px !important;
 }
-
+._navright-section {
+  margin-left: auto;
+  display: flex;
+}
 .navbar-nav ._navList {
   padding: 0 20px;
 }
@@ -399,7 +402,8 @@ Header Section
 ._hdrUserDiv ._btnCustom-2 {
   min-width: 125px;
 }
-._home ._hdrUserDiv, ._home .navbar-toggler {
+._home ._hdrUserDiv,
+._home .navbar-toggler {
   display: none;
 }
 /************************* 
@@ -449,17 +453,16 @@ Banner Section
 }
 ._bannerRight {
   position: absolute;
-  right: 0;
-  top: 0;
-  width: 50%;
-  right: -90px;
-  top: -55px;
+  width: 54%;
+  right: -140px;
+  top: -155px;
 }
 ._bannerRight img {
   width: 100%;
 }
 ._bannerCont {
   position: relative;
+  width: 62%;
 }
 ._bannerCont ._titleLarge {
   font-size: 72px;
@@ -635,6 +638,7 @@ About You Section
   max-width: 20%;
   padding-left: 15px;
   padding-right: 15px;
+  margin-bottom: 20px;
 }
 ._fLabel {
   width: 100%;
@@ -1214,6 +1218,7 @@ Footer Section
   position: absolute;
   left: 0;
   top: -3px;
+  cursor: pointer;
 }
 ._subTitleDiv ._back img {
   max-height: 40px;
@@ -1549,7 +1554,7 @@ Story Section
   background-size: cover;
   position: relative;
   z-index: 1;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
 }
 
 /* ._storySection:before{
@@ -2104,6 +2109,9 @@ RESPONSIVE
   ._tab3Nav .nav .nav-link {
     min-width: 150px;
   }
+  ._bannerCont {
+    width: 80%;
+  }
 }
 @media (max-width: 1480px) {
   ._titleLarge {
@@ -2120,6 +2128,7 @@ RESPONSIVE
     font-size: 18px;
     line-height: 27px;
   }
+ 
   ._numCircle {
     height: 100px;
     width: 100px;
@@ -2129,7 +2138,7 @@ RESPONSIVE
     padding-left: 130px;
   }
   ._testimonialSection ._testColLeft {
-    max-width: 70%;
+    max-width:63%;
   }
   ._footerGraphicBg {
     padding-bottom: 240px !important;
@@ -2148,6 +2157,7 @@ RESPONSIVE
   ._fCol {
     padding-left: 7.5px;
     padding-right: 7.5px;
+    margin-bottom: 25px;
   }
   ._checkDiv {
     padding: 10px;
@@ -2211,6 +2221,9 @@ RESPONSIVE
   ._productSection-1 {
     padding: 26px 0 115px;
   }
+  ._bannerCont {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2221,6 +2234,9 @@ RESPONSIVE
   ._titleLarge {
     font-size: 45px;
     line-height: 50px;
+  }
+  ._title-2 {
+    font-size: 25px;
   }
   .navbar-nav {
     margin-right: 20px !important;
@@ -2313,6 +2329,25 @@ RESPONSIVE
     padding-left: 0;
     padding-right: 0;
   }
+  ._btmHill {
+    margin: 0;
+  }
+  ._janeImg {
+    bottom: 15px;
+  }
+  ._janeImg img {
+    max-width: 70px;
+  }
+  ._teamCard-cont {
+    padding: 25px 15px 25px;
+  }
+  ._teamCard-titleDiv {
+    margin-bottom: 10px;
+  }
+  ._teamCard-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2344,16 +2379,14 @@ RESPONSIVE
     position: absolute;
     top: 0;
   }
-   .navbar-collapse {
+  .navbar-collapse {
     background: #31567c;
-    position: fixed;
-    height: 100%;
+    position: fixed !important;
+    height: 100% !important;
     width: 300px;
     left: 0;
     top: 0;
     display: block !important;
-    top: 0 !important;
-    left: 0;
     transition: transform 0.5s;
     transform: translateX(-115%);
     z-index: 9;
@@ -2366,7 +2399,7 @@ RESPONSIVE
     background-repeat: no-repeat;
     background-size: contain;
   }
-  .navbar .navbar-toggler.collapsed  .navbar-toggler-icon{
+  .navbar .navbar-toggler.collapsed .navbar-toggler-icon {
     background-image: url(assets/images/menu.png);
   }
   .navbar-toggler-icon:focus,
@@ -2402,6 +2435,9 @@ RESPONSIVE
     height: 45px;
     font-size: 16px;
     line-height: 25px;
+  }
+  ._bannerCont ._titleLarge {
+    max-width: 100%;
   }
   ._fCol {
     flex: 0 0 33.33%;
@@ -2464,7 +2500,7 @@ RESPONSIVE
   }
   .navbar-toggler {
     position: absolute;
-    right: 0;   
+    right: 0;
     padding: 0;
     right: 15px;
     top: 10px;
@@ -2499,6 +2535,9 @@ RESPONSIVE
   ._infoLists {
     margin-bottom: 30px;
   }
+  ._storySection ._textCard-col {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2514,10 +2553,14 @@ RESPONSIVE
     font-size: 25px;
     line-height: 30px;
   }
+  ._title-2 {
+    font-size: 20px;
+  }
   ._title-3 {
     font-size: 18px;
     line-height: 25px;
   }
+
   ._customBtn-1 {
     height: 40px;
     min-width: 145px;
@@ -2536,6 +2579,9 @@ RESPONSIVE
   }
   ._header-main .navbar {
     padding: 0 15px;
+  }
+  ._bannerOutter ._womanImg {
+    display: none;
   }
   ._bannerCont ._titleLarge {
     font-size: 35px;
@@ -2763,6 +2809,23 @@ RESPONSIVE
   ._libraryNavCont {
     margin-bottom: 30px;
   }
+  ._c-padding._topGap {
+    padding-top: 95px;
+  }
+  ._storySection ._textCard-col {
+    margin-bottom: 25px;
+  }
+
+  ._btmHill {
+    margin: 0;
+    margin-top: 50px;
+  }
+  ._teamCard-cont {
+    padding: 20px 15px 20px;
+  }
+  ._teamCard-col {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 630px) {
@@ -2775,6 +2838,10 @@ RESPONSIVE
   ._libraryNavCont .nav-pills .nav-link {
     font-size: 14px;
     padding: 10px 10px;
+  }
+  ._janeImg {
+    bottom: 10px;
+    left: 70%;
   }
 }
 
@@ -2797,5 +2864,8 @@ RESPONSIVE
   }
   ._hdrUserDiv ._btnCustom-2 {
     min-width: 95px;
+  }
+  .navbar-collapse {
+    width: 230px;
   }
 }
