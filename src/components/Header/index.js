@@ -9,12 +9,10 @@ const Header = ({ isHome = false }) => {
       <Container-fluid>
         {/* Navbar Begin */}
         <Navbar collapseOnSelect expand="lg" bg="" variant="">
-          <Navbar.Brand href="#home">
-            <div className="_logo">
-              <a href="/home">
-                <img alt="logo" src={Assets.images.logo} className="_logo" />
-                {/* Logo */}
-              </a>
+          <Navbar.Brand href="/home">
+            {/* Logo */}
+            <div className="_logo">              
+                <img alt="logo" src={Assets.images.logo} className="_logo" />  
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
