@@ -45,7 +45,7 @@ function Product() {
           <Container>
             <Row className="_textCard-row _aI-center">
               <Col md={12} lg={6} className="">
-                <div class="_mobDiv">
+                <div className="_mobDiv">
                   <img
                     className=""
                     src={Assets.images.screenImg1}
@@ -55,7 +55,7 @@ function Product() {
               </Col>
               <Col md={12} lg={6} className="">
                 <div className="_proCont">
-                  <div class="_titleDiv">
+                  <div className="_titleDiv">
                     <h2 className="_titleLarge">{data[0].result[0].title}</h2>
                     <p className="_txtLarge">
                       {data[0].result[0].body[0].children.map(
@@ -96,7 +96,7 @@ function Product() {
           <Container>
             <Row className="_proSec2-row">
               <Col md={12} lg={6} className="_proSec2-col">
-                <div class="_titleDiv">
+                <div className="_titleDiv">
                   <h2 className="_titleLarge _white">
                     <span className="_yellow">SaaS</span> health risk management
                     tool
@@ -179,7 +179,7 @@ function Product() {
               </Col>
             </Row>
           </Container>
-          <div class="_proBtmDiv">
+          <div className="_proBtmDiv">
             <Image src={Assets.images.manBenchHill} className="img-fluid" />
           </div>
         </div>
@@ -189,9 +189,9 @@ function Product() {
             <Row className="">
               {/* Col : Begin */}
               <Col md={10} lg={6} className="mx-auto">
-                <div class="_titleDiv text-center">
+                <div className="_titleDiv text-center">
                   <h2 className="_title">How we do it</h2>
-                  <p class="_title_txt  _fW-400">
+                  <p className="_title_txt  _fW-400">
                     See how we bring Empeal to life and help thousands of people
                     manage chronic health conditions through our unique
                     algorithm.
@@ -213,24 +213,25 @@ function Product() {
           <Container>
             <div className="_accordianContainer">
               <Accordion defaultActiveKey="0">
-                <Row className="">
-                  <Col md={12} lg={6} className="_acCard-col">
+                <Row className="_acCard-row">                  
                     {data[2].result.map((element, index) => (
-                      <Card key={index}>
-                        <Accordion.Toggle
-                          as={Card.Header}
-                          eventKey={index + ""}
-                        >
-                          <p className="_title-3">{element.title}</p>
-                        </Accordion.Toggle>
-                        <Accordion.Collapse eventKey={index + ""}>
-                          <Card.Body>
-                            {element.body[0].children[0].text}
-                          </Card.Body>
-                        </Accordion.Collapse>
-                      </Card>
+                      <Col md={12} lg={6} className="_acCard-col">
+                        <Card key={index}>
+                          <Accordion.Toggle
+                            as={Card.Header}
+                            eventKey={index + ""}
+                          >
+                            <p className="_title-3">{element.title}</p>
+                          </Accordion.Toggle>
+                          <Accordion.Collapse eventKey={index + ""}>
+                            <Card.Body>
+                              {element.body[0].children[0].text}
+                            </Card.Body>
+                          </Accordion.Collapse>
+                        </Card>
+                      </Col>
                     ))}
-                  </Col>
+                  
                 </Row>
               </Accordion>
             </div>
@@ -242,9 +243,9 @@ function Product() {
             <Row className="">
               {/* Col : Begin */}
               <Col md={12} lg={7} className="mx-auto">
-                <div class="_titleDiv text-center">
+                <div className="_titleDiv text-center">
                   <h2 className="_title">View Pricing</h2>
-                  <p class="_title_txt _fW-500">
+                  <p className="_title_txt _fW-500">
                     Pri ea vivendo omnesque, eos lobortis inimicus mediocritatem
                     id. Pro ad ubique erroribus, in modo mutat sed. Ei vix quot
                     suscipit, natum animal qui et. Usu vitae decore ut. Quidam
@@ -270,15 +271,15 @@ function Product() {
           <Row className="_abtRow">
             <Col md={12} lg={10}>
               <div className="_h-textBlock">
-                <span class="_numCircle">
+                <span className="_numCircle">
                   <Image
                     src={require("../../assets/images/tick.png")}
                     className="img-fluid"
                   />
                 </span>
-                <div class="_titleDiv _mB-0">
+                <div className="_titleDiv _mB-0">
                   <h2 className="_title _white">How Healthy are You?</h2>
-                  <p class="_title_txt _white _fW-400">
+                  <p className="_title_txt _white _fW-400">
                     Take our quiz to give you a greater insight into your health
                     with. Short questions will help you find out a bit more
                     about your day to day habits and make you come more aware of

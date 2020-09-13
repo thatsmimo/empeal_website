@@ -139,7 +139,7 @@ function HomePage() {
               </Col>
               <Col xs={12} md={12} lg={7}>
                 <div className="_bannerRigthTextBlock">
-                  <div class="_titleDiv">
+                  <div className="_titleDiv">
                     <h2 className="_title">What does Empeal Do?</h2>
                   </div>
 
@@ -214,10 +214,10 @@ function HomePage() {
           <Row className="_abtRow">
             <Col xs={12} md={8}>
               <div className="_abtBlock">
-                <span class="_awIcon">
+                <span className="_awIcon">
                   <Image src={Assets.images.trophy1} className="" />
                 </span>
-                <div class="_titleDiv">
+                <div className="_titleDiv">
                   <h2 className="_title">{data[2].result[0].award}</h2>
                   <p className="_title_txt">
                     {`${data[2].result[0].description[0].children[0].text}. ${data[2].result[0].description[1].children[0].text}`}
@@ -226,7 +226,7 @@ function HomePage() {
               </div>
             </Col>
             <Col xs={12} md={4}>
-              <div class="_compAwards">
+              <div className="_compAwards">
                 <Row>
                   <Col xs={12} md={6}>
                     <div className="_awardImgDiv">
@@ -259,7 +259,7 @@ function HomePage() {
         <Container>
           <Row className="_abtRow">
             <Col md={12} lg={8} className="mx-auto">
-              <div class="_titleDiv text-center">
+              <div className="_titleDiv text-center">
                 <h2 className="_title _blue-1">We Know Your Story...</h2>
                 <p className="_title_txt">
                   Our measurable metrics based on medical, nutrition, lifestyle,
@@ -343,7 +343,7 @@ function HomePage() {
                 </div>
               </Col>
               <Col xs={12} md={12} lg={9}>
-                <div class="_tabCont-outter">
+                <div className="_tabCont-outter">
                   <Tab.Content>
                     {/* Tab Pane : Begin  */}
                     <Tab.Pane eventKey="first">
@@ -356,11 +356,11 @@ function HomePage() {
                                 className="img-fluid"
                               />
                             </figure>
-                            <div class="_bA-div">
+                            <div className="_bA-div">
                               <p>See how Empeal worked for Jane</p>
                               <div className="can-toggle demo-rebrand-1">
                                 <input id="d" type="checkbox" />
-                                <label for="d">
+                                <label>
                                   <div
                                     className="can-toggle__switch"
                                     data-checked="After"
@@ -373,7 +373,7 @@ function HomePage() {
                           <Col md={6}>
                             <div className="_content">
                               <p className="_contCat">Employee</p>
-                              <h2 class="_title">John Doe</h2>
+                              <h2 className="_title">John Doe</h2>
                               <p>
                                 Jane is a customer support team leader. Jane’s
                                 responsibilities are overseeing technical
@@ -412,7 +412,7 @@ function HomePage() {
                           <Col md={6}>
                             <div className="_content">
                               <p className="_contCat">Organisation</p>
-                              <h2 class="_title">John Doe</h2>
+                              <h2 className="_title">John Doe</h2>
                               <p>
                                 Jane is a customer support team leader. Jane’s
                                 responsibilities are overseeing technical
@@ -451,7 +451,7 @@ function HomePage() {
                           <Col md={6}>
                             <div className="_content">
                               <p className="_contCat">Health Service</p>
-                              <h2 class="_title">John Doe</h2>
+                              <h2 className="_title">John Doe</h2>
                               <p>
                                 Jane is a customer support team leader. Jane’s
                                 responsibilities are overseeing technical
@@ -490,7 +490,7 @@ function HomePage() {
                           <Col md={6}>
                             <div className="_content">
                               <p className="_contCat">HR</p>
-                              <h2 class="_title">John Doe</h2>
+                              <h2 className="_title">John Doe</h2>
                               <p>
                                 Jane is a customer support team leader. Jane’s
                                 responsibilities are overseeing technical
@@ -529,7 +529,7 @@ function HomePage() {
                           <Col md={6}>
                             <div className="_content">
                               <p className="_contCat">Insurance</p>
-                              <h2 class="_title">John Doe</h2>
+                              <h2 className="_title">John Doe</h2>
                               <p>
                                 Jane is a customer support team leader. Jane’s
                                 responsibilities are overseeing technical
@@ -567,10 +567,10 @@ function HomePage() {
           <Row className="_abtRow">
             <Col md={12} lg={8}>
               <div className="_h-textBlock">
-                <span class="_numCircle">85%</span>
-                <div class="_titleDiv _mB-0">
+                <span className="_numCircle">85%</span>
+                <div className="_titleDiv _mB-0">
                   <h2 className="_title _white">of Corporates say…</h2>
-                  <p class="_title-4 _white _fW-400">
+                  <p className="_title-4 _white _fW-400">
                     …they have no scientiﬁc way of designing and implementing{" "}
                     <span className="_yellow">Employee Health Management</span>,
                     neither do they have any way of tracking data……
@@ -589,7 +589,7 @@ function HomePage() {
             <Row className="_testRow _aI-center">
               <Col xs={12} md={12} lg={4} className="_testColRight">
                 <div className="_abtBlock">
-                  <div class="_titleDiv">
+                  <div className="_titleDiv">
                     <h2 className="_title">Testimonials</h2>
                     <p className="_title_txt">
                       See what those who use Empeal have to say about it. All
@@ -602,7 +602,7 @@ function HomePage() {
                 </div>
               </Col>
               <Col xs={12} md={12} lg={8} className="_testColLeft">
-                <div class="_testOutter">
+                <div className="_testOutter">
                   <OwlCarousel items={3} className="owl-theme" margin={25}>
                     <div className="_testDiv">
                       <div className="_testCont">
@@ -707,7 +707,7 @@ function HomePage() {
         <Container>
           <Row className="">
             <Col md={12} lg={6} className="mx-auto">
-              <div class="_titleDiv text-center">
+              <div className="_titleDiv text-center">
                 <h2 className="_title">Our blog</h2>
                 <p className="_title_txt">
                   Quidam officiis similique sea ei, vel tollit indoctum
@@ -800,7 +800,7 @@ function HomePage() {
         <Container>
           <Row className="">
             <Col md={12} lg={6} className="mx-auto">
-              <div class="_titleDiv text-center">
+              <div className="_titleDiv text-center">
                 <h2 className="_title">Keep up to date...</h2>
               </div>
             </Col>
@@ -925,15 +925,15 @@ function HomePage() {
           <Row className="_abtRow">
             <Col md={12} lg={10}>
               <div className="_h-textBlock">
-                <span class="_numCircle">
+                <span className="_numCircle">
                   <Image
                     src={require("../../assets/images/tick.png")}
                     className="img-fluid"
                   />
                 </span>
-                <div class="_titleDiv _mB-0">
+                <div className="_titleDiv _mB-0">
                   <h2 className="_title _white">How Healthy are You?</h2>
-                  <p class="_title_txt _white _fW-400">
+                  <p className="_title_txt _white _fW-400">
                     Take our quiz to give you a greater insight into your health
                     with. Short questions will help you find out a bit more
                     about your day to day habits and make you come more aware of

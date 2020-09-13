@@ -43,9 +43,9 @@ function Pricing() {
             <Row className="">
               {/* Col : Begin */}
               <Col md={10} lg={5} className="">
-                <div class="_titleDiv">
+                <div className="_titleDiv">
                   <h2 className="_title">Pricing</h2>
-                  <p class="_title_txt  _fW-500">
+                  <p className="_title_txt  _fW-500">
                     Check out the different pricing plans we offer at Empeal and
                     see the unique features across all plans.{" "}
                   </p>
@@ -64,7 +64,7 @@ function Pricing() {
         {/* Section : Begin */}
         <div className="_priceTableSec _c-padding _white-bg _pB-0">
           <Container>
-            <div class="_tableOutter">
+            <div className="_tableOutter">
               <div className="table-responsive">
                 <Table striped hover className="_table">
                   <thead>
@@ -159,9 +159,9 @@ function Pricing() {
             <Row className="">
               {/* Col : Begin */}
               <Col md={10} lg={6} className="mx-auto">
-                <div class="_titleDiv text-center">
+                <div className="_titleDiv text-center">
                   <h2 className="_title">The Cost of doing Nothing</h2>
-                  <p class="_title-4">
+                  <p className="_title-4">
                     Unmanaged Chronic Health Conditions are wasting{" "}
                     <span className="_red">BILLIONS</span>
                   </p>

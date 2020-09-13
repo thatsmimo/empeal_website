@@ -25,7 +25,7 @@ function Library() {
           <Container>
             <Row className="_textCard-row">
               <Col md={12} lg={5} className="">
-                <div class="_titleDiv _mB-0">
+                <div className="_titleDiv _mB-0">
                   <h2 className="_titleLarge _white">Library</h2>
                   <p className="_title_txt _white">
                     Catch the latest news and articles from Empeal.
@@ -54,7 +54,7 @@ function Library() {
               </Col>
               <Col md={12} lg={7} className="">
                 <div className="">
-                  <div class="_titleDiv text-center">
+                  <div className="_titleDiv text-center">
                     <h2 className="_title _white">Subscribe to read more</h2>
                   </div>
                   <Row>
@@ -821,15 +821,15 @@ function Library() {
           <Row className="_abtRow">
             <Col md={12} lg={10}>
               <div className="_h-textBlock">
-                <span class="_numCircle">
+                <span className="_numCircle">
                   <Image
                     src={require("../../assets/images/tick.png")}
                     className="img-fluid"
                   />
                 </span>
-                <div class="_titleDiv _mB-0">
+                <div className="_titleDiv _mB-0">
                   <h2 className="_title _white">How Healthy are You?</h2>
-                  <p class="_title_txt _white _fW-400">
+                  <p className="_title_txt _white _fW-400">
                     Take our quiz to give you a greater insight into your health
                     with. Short questions will help you find out a bit more
                     about your day to day habits and make you come more aware of

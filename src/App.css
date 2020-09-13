@@ -41,7 +41,7 @@
 
 /********** Common ************/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif !important;
   color: #2a333b;
   font-size: 18px;
   line-height: 30px;
@@ -278,9 +278,13 @@ img {
   margin-right: 10px;
 }
 ._appBtn span {
+  display: inline-flex;
   position: relative;
-  top: -3px;
+  top: 3px;
   padding-right: 3px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 ._appBtn span img {
@@ -361,10 +365,12 @@ Header Section
   top: 0;
   left: 0;
   z-index: 999;
-}
-._header-main._header {
   background-color: #fff;
   box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.05);
+}
+._home ._header-main {
+  background-color: transparent;
+  box-shadow: none;
 }
 ._header-main .navbar {
   padding: 0 45px;
@@ -462,15 +468,16 @@ Banner Section
 }
 ._bannerCont {
   position: relative;
-  width: 62%;
+  width: 80%;
 }
 ._bannerCont ._titleLarge {
   font-size: 72px;
   line-height: 80px;
+  width: 82%;
 }
 ._womanImg {
   position: absolute;
-  right: -125px;
+  right: -250px;
   bottom: -25px;
 }
 ._womanImg img {
@@ -503,9 +510,7 @@ Banner Section
 }
 
 ._bannerRigthTextBlock {
-  padding-right: 150px;
-}
-._customListGrp-1 {
+  padding-right: 215px;
 }
 
 ._customListGrp-1 .list-group-item {
@@ -623,8 +628,8 @@ About You Section
 }
 
 ._careerOptionBox {
-  padding-left: 120px;
-  padding-right: 120px;
+  padding-left: 160px;
+  padding-right: 160px;
 }
 ._fRow {
   display: flex;
@@ -643,6 +648,8 @@ About You Section
 ._fLabel {
   width: 100%;
   text-align: center;
+  max-width: 260px;
+  margin: 0 auto;
 }
 ._fSpan {
   display: block;
@@ -899,10 +906,7 @@ Testimonial Section
   padding-right: 0;
   overflow: hidden;
 }
-._testColLeft {
-  /* position: absolute !important; */
-  /* right: -127px; */
-}
+
 ._testimonialSection ._testOutter {
   display: block;
   margin-right: -124px;
@@ -1138,7 +1142,10 @@ Up to Date Section
   background: #fff;
   padding: 7px;
 }
-
+._takeQuiz ._btnCustom-4:hover {
+  background-color: #9bd025 !important;
+  border: 1px solid #9bd025 !important;
+}
 /************************* 
 Footer Section
 *************************/
@@ -1337,12 +1344,17 @@ Footer Section
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 30px;
+  text-align: center;
 }
 ._orgList ._checkbox-label {
   color: #fff;
   padding-left: 45px;
   font-size: 18px;
   margin-bottom: 0;
+  text-transform: capitalize;
+  min-width: 225px;
+  text-align: left;
+  display: inline-block;
 }
 
 ._orgList ._checkbox-label > ._chSpan {
@@ -1555,6 +1567,11 @@ Story Section
   position: relative;
   z-index: 1;
   padding-bottom: 0 !important;
+}
+
+._storySection .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* ._storySection:before{
@@ -1819,8 +1836,7 @@ Product
   padding-left: 100px;
   padding-right: 75px;
 }
-._mobDiv {
-}
+
 ._mobDiv img {
   margin-left: 0px;
 }
@@ -1831,9 +1847,6 @@ Product
 }
 ._explainerFunnel {
   text-align: center;
-}
-
-._accordianContainer {
 }
 
 ._acCard-col .card {
@@ -1875,8 +1888,6 @@ Product
 /************************* 
 Pricing  
 *************************/
-._pricingPage {
-}
 
 ._pricingPage ._l-btm-hill {
   margin-top: -100px;
@@ -1887,8 +1898,7 @@ Pricing
   bottom: 75px;
   right: 11%;
 }
-._pricingPage ._absImg img {
-}
+
 ._tableOutter {
   border-radius: 5px;
   overflow: hidden;
@@ -2100,6 +2110,9 @@ RESPONSIVE
     font-size: 60px;
     line-height: 65px;
   }
+  ._bannerCont ._titleLarge {
+    width: 90%;
+  }
   ._productSection-1 {
     background-size: 65%;
   }
@@ -2111,6 +2124,17 @@ RESPONSIVE
   }
   ._bannerCont {
     width: 80%;
+  }
+  ._womanImg {
+    right: -180px;
+  }
+  ._progRow {
+    margin-right: -15px !important;
+    margin-left: -15px !important;
+  }
+  ._progRow ._progCol {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (max-width: 1480px) {
@@ -2128,7 +2152,9 @@ RESPONSIVE
     font-size: 18px;
     line-height: 27px;
   }
- 
+  ._bannerRigthTextBlock {
+    padding-right: 150px;
+  }
   ._numCircle {
     height: 100px;
     width: 100px;
@@ -2138,7 +2164,7 @@ RESPONSIVE
     padding-left: 130px;
   }
   ._testimonialSection ._testColLeft {
-    max-width:63%;
+    max-width: 63%;
   }
   ._footerGraphicBg {
     padding-bottom: 240px !important;
@@ -2158,6 +2184,10 @@ RESPONSIVE
     padding-left: 7.5px;
     padding-right: 7.5px;
     margin-bottom: 25px;
+  }
+  ._careerOptionBox {
+    padding-left: 130px;
+    padding-right: 130px;
   }
   ._checkDiv {
     padding: 10px;
@@ -2224,6 +2254,9 @@ RESPONSIVE
   ._bannerCont {
     width: 100%;
   }
+  ._aboutInfo li {
+    font-size: 18px;
+  }
 }
 
 @media (max-width: 1199px) {
@@ -2254,15 +2287,10 @@ RESPONSIVE
     margin-bottom: 0;
   }
   ._careerOptionBox {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
-  ._orgList {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin-bottom: 20px;
-  }
   ._testimonialSection ._testColLeft {
     position: relative !important;
     right: 0;
@@ -2348,6 +2376,31 @@ RESPONSIVE
     font-size: 20px;
     line-height: 25px;
   }
+  ._bannerRight {
+    width: 65%;
+  }
+  ._bannerCont ._titleLarge {
+    width: 90%;
+  }
+  ._womanImg {
+    right: -140px;
+  }
+  ._storyFigCont img {
+    max-width: 125px;
+  }
+  ._progTxt {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  ._progCol ._title-4 {
+    font-size: 18px;
+  }
+  ._howItWork {
+    padding: 30px 0 10px;
+  }
+  ._janeImg {
+    bottom: 35px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -2364,6 +2417,16 @@ RESPONSIVE
   ._title-3 {
     font-size: 20px;
     line-height: 25px;
+  }
+  ._banner-top {
+    min-height: unset;
+  }
+  ._mobScreenSlider .carousel-item img {
+    max-width: 450px;
+  }
+  ._careerOptionBox {
+    padding-left: 0px;
+    padding-right: 0px;
   }
   /* Header  */
   .navbar-nav {
@@ -2424,6 +2487,7 @@ RESPONSIVE
   ._bannerCont ._titleLarge {
     font-size: 45px;
     line-height: 55px;
+    width: 90%;
   }
   ._title_txt {
     font-size: 16px;
@@ -2435,9 +2499,6 @@ RESPONSIVE
     height: 45px;
     font-size: 16px;
     line-height: 25px;
-  }
-  ._bannerCont ._titleLarge {
-    max-width: 100%;
   }
   ._fCol {
     flex: 0 0 33.33%;
@@ -2467,7 +2528,7 @@ RESPONSIVE
   }
   ._navPill-outter .nav {
     flex-direction: row !important;
-    width: 980px;
+    width: 1010px;
   }
   ._navDiv ._navIcon {
     right: auto;
@@ -2511,6 +2572,9 @@ RESPONSIVE
     margin-top: -60px;
     margin-bottom: -75px;
   }
+  ._bannerRight {
+    width: 62%;
+  }
   ._proSec2-col {
     margin-bottom: 15px;
   }
@@ -2538,6 +2602,33 @@ RESPONSIVE
   ._storySection ._textCard-col {
     margin-bottom: 30px;
   }
+  ._progRow {
+    margin-right: -7.5px !important;
+    margin-left: -7.5px !important;
+  }
+  ._progRow ._progCol {
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  ._aboutInfo li {
+    font-size: 16px;
+  }
+  ._progCol {
+    margin-bottom: 25px;
+  }
+  ._progCol:last-child {
+    margin-bottom: 0;
+  }
+  ._storyPage {
+    background-size: 30px;
+  }
+  ._aboutInfo li {
+    color: #31567c;
+  }
+  ._storyFigCont .row > div:first-child {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2560,7 +2651,6 @@ RESPONSIVE
     font-size: 18px;
     line-height: 25px;
   }
-
   ._customBtn-1 {
     height: 40px;
     min-width: 145px;
@@ -2677,6 +2767,7 @@ RESPONSIVE
     font-size: 30px;
     line-height: 39px;
     margin-bottom: 10px;
+    width: 56%;
   }
   ._titleTxt {
     font-size: 16px;
@@ -2717,9 +2808,15 @@ RESPONSIVE
     padding-right: 25px;
     padding-left: 25px;
   }
+  ._numCircle {
+    height: 75px;
+    width: 75px;
+    font-size: 20px;
+  }
   ._orgList {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
   }
   ._careerOptionBox ._mB-45 {
     margin-bottom: 25px !important;
@@ -2826,9 +2923,30 @@ RESPONSIVE
   ._teamCard-col {
     margin-bottom: 25px;
   }
+  ._storyFigCont img {
+    max-width: 70px;
+  }
+  ._storyFigCont .row > div:first-child {
+    flex: 0 0 100px;
+    max-width: 100px;
+  }
+  ._storyFigCont .row > div:last-child {
+    flex: 0 0 calc(100% - 100px);
+    max-width: calc(100% - 100px);
+  }
+  ._barDiv .progress {
+    height: 10px;
+  }
+  ._iconInfoDiv-col {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 630px) {
+  p {
+    font-size: 15px;
+    line-height: 25px;
+  }
   ._l-btm-hill {
     margin-top: 65px;
   }
@@ -2842,6 +2960,11 @@ RESPONSIVE
   ._janeImg {
     bottom: 10px;
     left: 70%;
+  }
+  ._orgList {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
   }
 }
 

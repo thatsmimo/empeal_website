@@ -20,7 +20,7 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
       <Container>
         <Row className="">
           <Col xs={12} md={8} className="mx-auto">
-            <div class="_titleDiv text-center">
+            <div className="_titleDiv text-center">
               <h2 className="_title _white">{tellAboutData.result[0].title}</h2>
               <p className="_title_txt _white">
                 {tellAboutData.result[0].description[0].children[0].text}
@@ -91,7 +91,7 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
       <Container>
         <Row className="">
           <Col xs={12} md={8} className="mx-auto">
-            <div class="_titleDiv text-center">
+            <div className="_titleDiv text-center">
               <h2 className="_title _white">
                 <span className="_absIcon">
                   <Image
@@ -126,13 +126,13 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
               <Col md="12" lg="10" className="mx-auto">
                 {/* Form Begins */}
                 <Form>
-                  <div class="_radiobox-list _orgLists">
+                  <div className="_radiobox-list _orgLists">
                     {homeTellUsAboutRadioItemsArr.map((element, index) => (
                       <div className="_orgList" key={index}>
-                        <label class="_checkbox-label">
+                        <label className="_checkbox-label">
                           <input type="checkbox" />
                           {element.name}
-                          <span class="_chSpan"></span>
+                          <span className="_chSpan"></span>
                         </label>
                       </div>
                     ))}
@@ -162,7 +162,7 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
       <Container>
         <Row className="">
           <Col xs={12} md={8} className="mx-auto">
-            <div class="_titleDiv text-center">
+            <div className="_titleDiv text-center">
               <h2 className="_title _white">
                 <span className="_absIcon">
                   <Image
@@ -209,7 +209,7 @@ const HomeTellUsAbout = ({ tellAboutData }) => {
                 </div>
               </Col>
               <Col md="6" lg="6" className="">
-                <ul class="_lists _tickLists">
+                <ul className="_lists _tickLists">
                   <li>
                     Easy to rollout, even for remote and multi-location
                     employees
