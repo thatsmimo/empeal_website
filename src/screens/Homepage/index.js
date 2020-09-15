@@ -33,6 +33,22 @@ function HomePage() {
     fetchData();
   }, []);
 
+  const  options={
+    loop: false,
+    nav:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+};
+
   const fetchData = async () => {
     const allPromise = await Promise.all([
       await Api.get("introduction"),
@@ -603,7 +619,7 @@ function HomePage() {
               </Col>
               <Col xs={12} md={12} lg={8} className="_testColLeft">
                 <div className="_testOutter">
-                  <OwlCarousel items={3} className="owl-theme" margin={25}>
+                  <OwlCarousel  {...options} className="owl-theme" margin={25}>
                     <div className="_testDiv">
                       <div className="_testCont">
                         <p>
