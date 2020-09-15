@@ -225,6 +225,7 @@ img {
 }
 ._title-1 {
   font-size: 35px;
+  line-height:40px ;
   font-weight: 700;
   color: #31567c;
   margin-bottom: 25px;
@@ -2085,6 +2086,56 @@ Pricing
 ._link2:hover {
   background-position: 100% 8px;
 }
+
+/* Blog Details */
+._blogD-hdr{
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eaecef;
+}
+._blogD-hdr ._title-1{
+  margin-bottom: 10px;
+}
+._blogD-bdy p{
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 600;
+  text-align: justify;
+}
+._blogD-bdy a{
+  color: #29abe2;
+}
+._date{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+._date ._icon{
+  display: inline-block;
+  position: relative;
+  width: 25px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-flex;
+}
+._date ._icon img{
+  height: 100%;
+  width: auto;
+}
+._blogBar{
+  margin-bottom: 20px;
+}
+._blogBar a{
+  color: #31567c;
+  font-weight: 600;
+  text-decoration: underline;
+  display: inline-block;
+  transition: all 0.3s;
+}
+._blogBar a:hover{
+  color: #29abe2;
+}
 /************************* 
 RESPONSIVE 
 *************************/
@@ -2640,6 +2691,11 @@ RESPONSIVE
     font-size: 35px;
     line-height: 45px;
   }
+  ._title-1 {
+    font-size: 30px;
+    line-height: 35px;
+
+  }
   ._title {
     font-size: 25px;
     line-height: 30px;
@@ -2939,6 +2995,10 @@ RESPONSIVE
   }
   ._iconInfoDiv-col {
     margin-bottom: 25px;
+  }
+  ._blogD-bdy p{
+    font-size: 16px;
+    line-height: 28px;
   }
 }
 

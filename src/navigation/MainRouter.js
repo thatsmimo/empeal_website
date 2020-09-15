@@ -9,6 +9,7 @@ import Library from "../screens/Library";
 import Product from "../screens/Product";
 import Pricing from "../screens/Pricing";
 import Stories from "../screens/Stories";
+import BlogDetails from "../screens/BlogDetails";
 
 export default function MainRouter() {
   return (
@@ -22,6 +23,7 @@ export default function MainRouter() {
       <Route exact path="/product" component={Product} />
       <Route exact path="/pricing" component={Pricing} />
       <Route exact path="/stories" component={Stories} />
+      <Route exact path="/blogdetails" component={BlogDetails} />
     </Switch>
   );
 }
