@@ -9,21 +9,18 @@ import {
   Image,
   Carousel,
 } from "react-bootstrap";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import "./style.css";
-import "./";
 import { Assets } from "../../Common";
 import {
   Header,
   Footer,
   FullPageLoader,
   HomeTellUsAbout,
+  EmployeeStory,
+  Uptodate,
+  Testimonial,
+  Blog,
 } from "../../components";
 import Api from "../../js/service/api";
-import EmployeeStory from "../../components/EmployeeStory";
-import { owlCarouselOptions } from "../../utils";
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -40,8 +37,11 @@ function HomePage() {
       await Api.get("award"),
       await Api.get("tell_about"),
       await Api.get("employee_story"),
+      await Api.get("uptodate"),
+      await Api.get("testimonials"),
+      await Api.get("blog"),
     ]);
-    console.log("HomePage: ", allPromise);
+    // console.log("HomePage: ", allPromise);
     setData(allPromise);
     setLoading(false);
   };
@@ -279,342 +279,14 @@ function HomePage() {
         </Container>
       </div>
 
-      {/***** About Company : Begin ********/}
-      <div className="_testimonialSection">
-        <div className="_testimonialSection-inner">
-          <Container>
-            <Row className="_testRow _aI-center">
-              <Col xs={12} md={12} lg={4} className="_testColRight">
-                <div className="_abtBlock">
-                  <div className="_titleDiv">
-                    <h2 className="_title">Testimonials</h2>
-                    <p className="_title_txt">
-                      See what those who use Empeal have to say about it. All
-                      different users share their experiences…
-                    </p>
-                    <a href="#" className="btn _btnCustom-2">
-                      Read More
-                    </a>
-                  </div>
-                </div>
-              </Col>
-              <Col xs={12} md={12} lg={8} className="_testColLeft">
-                <div className="_testOutter">
-                  <OwlCarousel {...owlCarouselOptions} className="owl-theme">
-                    <div className="_testDiv">
-                      <div className="_testCont">
-                        <p>
-                          "Dicat eripuit accumsan facilisi has cetero
-                          argumentum, vel at fugit definitionem integre
-                          abhorreant epicurei ferri pri."
-                        </p>
-                      </div>
-                      <div className="_testBtmCont">
-                        <span className="_testImg">
-                          <Image src={Assets.images.testIcon} className="" />
-                        </span>
-                        <div className="_testInfo">
-                          <p className="_name">Hector Mariano</p>
-                          <p className="_src">Google</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="_testDiv">
-                      <div className="_testCont">
-                        <p>
-                          "Dicat eripuit accumsan facilisi has cetero
-                          argumentum, vel at fugit definitionem integre
-                          abhorreant epicurei ferri pri."
-                        </p>
-                      </div>
-                      <div className="_testBtmCont">
-                        <span className="_testImg">
-                          <Image src={Assets.images.testIcon} className="" />
-                        </span>
-                        <div className="_testInfo">
-                          <p className="_name">Hector Mariano</p>
-                          <p className="_src">Google</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="_testDiv">
-                      <div className="_testCont">
-                        <p>
-                          "Dicat eripuit accumsan facilisi has cetero
-                          argumentum, vel at fugit definitionem integre
-                          abhorreant epicurei ferri pri."
-                        </p>
-                      </div>
-                      <div className="_testBtmCont">
-                        <span className="_testImg">
-                          <Image src={Assets.images.testIcon} className="" />
-                        </span>
-                        <div className="_testInfo">
-                          <p className="_name">Hector Mariano</p>
-                          <p className="_src">Google</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="_testDiv">
-                      <div className="_testCont">
-                        <p>
-                          "Dicat eripuit accumsan facilisi has cetero
-                          argumentum, vel at fugit definitionem integre
-                          abhorreant epicurei ferri pri."
-                        </p>
-                      </div>
-                      <div className="_testBtmCont">
-                        <span className="_testImg">
-                          <Image src={Assets.images.testIcon} className="" />
-                        </span>
-                        <div className="_testInfo">
-                          <p className="_name">Hector Mariano</p>
-                          <p className="_src">Google</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="_testDiv">
-                      <div className="_testCont">
-                        <p>
-                          "Dicat eripuit accumsan facilisi has cetero
-                          argumentum, vel at fugit definitionem integre
-                          abhorreant epicurei ferri pri."
-                        </p>
-                      </div>
-                      <div className="_testBtmCont">
-                        <span className="_testImg">
-                          <Image src={Assets.images.testIcon} className="" />
-                        </span>
-                        <div className="_testInfo">
-                          <p className="_name">Hector Mariano</p>
-                          <p className="_src">Google</p>
-                        </div>
-                      </div>
-                    </div>
-                  </OwlCarousel>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-      </div>
+      {/***** Testimonial ********/}
+      <Testimonial data={data[6]} />
 
       {/***** Blog Section : Begin ********/}
-      <div className="_blogSection _c-padding _bg-white">
-        <Container>
-          <Row className="">
-            <Col md={12} lg={6} className="mx-auto">
-              <div className="_titleDiv text-center">
-                <h2 className="_title">Our blog</h2>
-                <p className="_title_txt">
-                  Quidam officiis similique sea ei, vel tollit indoctum
-                  efficiendi ei, at nihil tantas platonem eos.{" "}
-                </p>
-              </div>
-            </Col>
-          </Row>
-          {/* Blog Row : Begin  */}
-          <Row className="_blogRow">
-            {/* Blog Col : Begin  */}
-            <Col md={6} lg={4} className="_blogCol">
-              <div className="_blogDiv">
-                <p className="_tag">Nutrition</p>
-                <figure className="_blogFig">
-                  <Image
-                    src={require("../../assets/images/dummy-img.jpg")}
-                    className="img-fluid"
-                  />
-                </figure>
-                <a href="#" className="_blogTitle">
-                  Future of your health
-                </a>
-                <ul className="_blogInfo">
-                  <li className="_dark-1">Sohani Dey</li>
-                  <li>20 Aug, 2019</li>
-                </ul>
-                <p className="_blogTxt">
-                  His dolorem habemus mandamus et, eius ponderum lorem molestiae
-                  ne, esse vulputate definitiones iracundia at quo……
-                </p>
-              </div>
-            </Col>
-            {/* Blog Col : End  */}
-            {/* Blog Col : Begin  */}
-            <Col md={6} lg={4} className="_blogCol">
-              <div className="_blogDiv">
-                <p className="_tag">Fitness</p>
-                <figure className="_blogFig">
-                  <Image
-                    src={require("../../assets/images/dummy-img.jpg")}
-                    className="img-fluid"
-                  />
-                </figure>
-                <a href="#" className="_blogTitle">
-                  Getting Outdoors
-                </a>
-                <ul className="_blogInfo">
-                  <li className="_dark-1">Sohani Dey</li>
-                  <li>20 Aug, 2019</li>
-                </ul>
-                <p className="_blogTxt">
-                  His dolorem habemus mandamus et, eius ponderum lorem molestiae
-                  ne, esse vulputate definitiones iracundia at quo……
-                </p>
-              </div>
-            </Col>
-            {/* Blog Col : End  */}
-            {/* Blog Col : Begin  */}
-            <Col md={6} lg={4} className="_blogCol">
-              <div className="_blogDiv">
-                <p className="_tag">Technology</p>
-                <figure className="_blogFig">
-                  <Image
-                    src={require("../../assets/images/dummy-img.jpg")}
-                    className="img-fluid"
-                  />
-                </figure>
-                <a href="#" className="_blogTitle">
-                  How apple watch counts calories
-                </a>
-                <ul className="_blogInfo">
-                  <li className="_dark-1">Sohani Dey</li>
-                  <li>20 Aug, 2019</li>
-                </ul>
-                <p className="_blogTxt">
-                  His dolorem habemus mandamus et, eius ponderum lorem molestiae
-                  ne, esse vulputate definitiones iracundia at quo……
-                </p>
-              </div>
-            </Col>
-            {/* Blog Col : End  */}
-          </Row>
-          {/* Blog Row : End  */}
-        </Container>
-      </div>
+      <Blog data={data[7]} />
 
-      {/***** Uptodate Section : Begin ********/}
-      <div className="_uptodateSection _c-padding _bg-white">
-        <Container>
-          <Row className="">
-            <Col md={12} lg={6} className="mx-auto">
-              <div className="_titleDiv text-center">
-                <h2 className="_title">Keep up to date...</h2>
-              </div>
-            </Col>
-          </Row>
-          {/* Blog Row : Begin  */}
-          <Row className="_uptRow">
-            {/* Col : Begin  */}
-            <Col md={12} lg={4} className="_uptCol">
-              <div className="_subsOutter">
-                <span className="_pin">
-                  <Image src={Assets.images.pin} className="" />
-                </span>
-                <span className="_boyHoping">
-                  <Image src={Assets.images.boyHoping2} className="" />
-                </span>
-                <div className="_subsDiv text-center">
-                  <h3 className="_title-1">Catch up with Empeal!</h3>
-                  <a href="#" className="btn _btnCustom-3">
-                    Subscribe
-                  </a>
-                </div>
-                <span className="_girlWithCycle">
-                  <Image src={Assets.images.girlCycle} className="" />
-                </span>
-              </div>
-            </Col>
-            {/* Blog Col : End  */}
-            {/* Blog Col : Begin  */}
-            <Col md={12} lg={8} className="_uptCol">
-              <Row className="_iconInfoDiv-row">
-                <Col md={6} lg={6} className="_iconInfoDiv-col">
-                  <div className="_iconInfoDiv">
-                    <span className="_iconHolder">
-                      <Image
-                        src={Assets.images.newsIcon}
-                        className="_iconImg"
-                      />
-                    </span>
-                    <div className="_listCont">
-                      <p className="_title-4">News</p>
-                      <p>
-                        Quidam officiis similique sea ei, vel tollit indoctum
-                        efficiendi nihil tantas platonem eos.{" "}
-                      </p>
-                      <a href="#" className="_link">
-                        Read
-                      </a>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} lg={6} className="_iconInfoDiv-col">
-                  <div className="_iconInfoDiv">
-                    <span className="_iconHolder">
-                      <Image
-                        src={Assets.images.blogIcon}
-                        className="_iconImg"
-                      />
-                    </span>
-                    <div className="_listCont">
-                      <p className="_title-4">Blogs</p>
-                      <p>
-                        Quidam officiis similique sea ei, vel tollit indoctum
-                        efficiendi nihil tantas platonem eos.{" "}
-                      </p>
-                      <a href="#" className="_link">
-                        Read
-                      </a>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} lg={6} className="_iconInfoDiv-col">
-                  <div className="_iconInfoDiv">
-                    <span className="_iconHolder">
-                      <Image
-                        src={Assets.images.poscastIcon}
-                        className="_iconImg"
-                      />
-                    </span>
-                    <div className="_listCont">
-                      <p className="_title-4">Podcasts</p>
-                      <p>
-                        Quidam officiis similique sea ei, vel tollit indoctum
-                        efficiendi nihil tantas platonem eos.{" "}
-                      </p>
-                      <a href="#" className="_link">
-                        Litsen Now
-                      </a>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} lg={6} className="_iconInfoDiv-col">
-                  <div className="_iconInfoDiv">
-                    <span className="_iconHolder">
-                      <Image
-                        src={Assets.images.interviewIcon}
-                        className="_iconImg"
-                      />
-                    </span>
-                    <div className="_listCont">
-                      <p className="_title-4">Interview</p>
-                      <p>
-                        Quidam officiis similique sea ei, vel tollit indoctum
-                        efficiendi nihil tantas platonem eos.{" "}
-                      </p>
-                      <a href="#" className="_link">
-                        Read
-                      </a>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            {/* Col : End  */}
-          </Row>
-          {/* Row : End  */}
-        </Container>
-      </div>
+      {/***** Uptodate Section ********/}
+      <Uptodate data={data[5]} />
 
       {/***** Take Quiz Section : Begin ********/}
       <div className="_takeQuiz _blueBg _c-padding">

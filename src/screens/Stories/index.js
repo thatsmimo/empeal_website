@@ -7,7 +7,7 @@ import { useLocation } from "react-router-dom";
 function Stories() {
   const location = useLocation();
   const { story } = location.state || false;
-  console.log(JSON.stringify(story));
+  // console.log(JSON.stringify(story));
 
   return (
     <div className="_main">

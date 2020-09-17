@@ -18,7 +18,7 @@ export default function Company() {
 
   const fetchData = async () => {
     const allPromise = await Promise.all([await Api.get("company_story")]);
-    console.log("Company: ", allPromise);
+    // console.log("Company: ", allPromise);
     setData(allPromise);
     setLoading(false);
   };
