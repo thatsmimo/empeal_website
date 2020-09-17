@@ -8,8 +8,6 @@ import {
   ListGroup,
   Image,
   Carousel,
-  Nav,
-  Tab,
 } from "react-bootstrap";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -24,6 +22,8 @@ import {
   HomeTellUsAbout,
 } from "../../components";
 import Api from "../../js/service/api";
+import EmployeeStory from "../../components/EmployeeStory";
+import { owlCarouselOptions } from "../../utils";
 
 function HomePage() {
   const [data, setData] = useState([]);
@@ -33,28 +33,13 @@ function HomePage() {
     fetchData();
   }, []);
 
-  const  options={
-    loop: false,
-    nav:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
-};
-
   const fetchData = async () => {
     const allPromise = await Promise.all([
       await Api.get("introduction"),
       await Api.get("mobile_content"),
       await Api.get("award"),
       await Api.get("tell_about"),
+      await Api.get("employee_story"),
     ]);
     console.log("HomePage: ", allPromise);
     setData(allPromise);
@@ -271,311 +256,7 @@ function HomePage() {
       <HomeTellUsAbout tellAboutData={data[3]} />
 
       {/***** Your Story : Begin ********/}
-      <div className="_yourStory _c-padding">
-        <Container>
-          <Row className="_abtRow">
-            <Col md={12} lg={8} className="mx-auto">
-              <div className="_titleDiv text-center">
-                <h2 className="_title _blue-1">We Know Your Story...</h2>
-                <p className="_title_txt">
-                  Our measurable metrics based on medical, nutrition, lifestyle,
-                  behaviour and individual goals data, help users and
-                  organisations understand their health footprint and act on it.
-                </p>
-              </div>
-            </Col>
-          </Row>
-          <Tab.Container defaultActiveKey="first" className="_storyTab">
-            <Row className="_abtRow">
-              <Col xs={12} md={12} lg={3}>
-                <div className="_navPill-outter">
-                  <Nav variant="pills" className="flex-column">
-                    <Nav.Item>
-                      <Nav.Link eventKey="first">
-                        <div className="_navDiv">
-                          <p className="_txt">Employee</p>
-                          <span className="_navIcon">
-                            <Image
-                              src={require("../../assets/images/np_employee.png")}
-                              className=""
-                            />
-                          </span>
-                        </div>
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="second">
-                        <div className="_navDiv">
-                          <p className="_txt">Organisation</p>
-                          <span className="_navIcon">
-                            <Image
-                              src={require("../../assets/images/np-building.png")}
-                              className=""
-                            />
-                          </span>
-                        </div>
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">
-                        <div className="_navDiv">
-                          <p className="_txt">Health Service</p>
-                          <span className="_navIcon">
-                            <Image
-                              src={require("../../assets/images/Health_icon_red.png")}
-                              className=""
-                            />
-                          </span>
-                        </div>
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="forth">
-                        <div className="_navDiv">
-                          <p className="_txt">HR</p>
-                          <span className="_navIcon">
-                            <Image
-                              src={require("../../assets/images/np_human-resources.png")}
-                              className=""
-                            />
-                          </span>
-                        </div>
-                      </Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="fifth">
-                        <div className="_navDiv">
-                          <p className="_txt">Insurance</p>
-                          <span className="_navIcon">
-                            <Image
-                              src={require("../../assets/images/np_health-insurance.png")}
-                              className=""
-                            />
-                          </span>
-                        </div>
-                      </Nav.Link>
-                    </Nav.Item>
-                  </Nav>
-                </div>
-              </Col>
-              <Col xs={12} md={12} lg={9}>
-                <div className="_tabCont-outter">
-                  <Tab.Content>
-                    {/* Tab Pane : Begin  */}
-                    <Tab.Pane eventKey="first">
-                      <div className="_paneInner">
-                        <Row className="_paneInner-row">
-                          <Col md={6}>
-                            <figure className="_tabFig">
-                              <Image
-                                src={require("../../assets/images/tab-img-1.svg")}
-                                className="img-fluid"
-                              />
-                            </figure>
-                            <div className="_bA-div">
-                              <p>See how Empeal worked for Jane</p>
-                              <div className="can-toggle demo-rebrand-1">
-                                <input id="d" type="checkbox" />
-                                <label>
-                                  <div
-                                    className="can-toggle__switch"
-                                    data-checked="After"
-                                    data-unchecked="Before"
-                                  ></div>
-                                </label>
-                              </div>
-                            </div>
-                          </Col>
-                          <Col md={6}>
-                            <div className="_content">
-                              <p className="_contCat">Employee</p>
-                              <h2 className="_title">John Doe</h2>
-                              <p>
-                                Jane is a customer support team leader. Jane’s
-                                responsibilities are overseeing technical
-                                systems, handling employee relations, ensuring
-                                compliance with regulations, managing staff
-                                engagement, assessing staff needs, hiring and
-                                developing each team member to the best
-                                potential.{" "}
-                              </p>
-                              <p>
-                                <strong>Jane always feels tired</strong> and
-                                confident she could do better if{" "}
-                                <strong>there was a way</strong> to{" "}
-                                <strong>balance her life better</strong>.{" "}
-                              </p>
-                              <a href="/stories" className="btn _btnCustom-2">
-                                Full Story
-                              </a>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Tab.Pane>
-                    {/* Tab Pane : Begin  */}
-                    <Tab.Pane eventKey="second">
-                      <div className="_paneInner">
-                        <Row className="_paneInner-row">
-                          <Col md={6}>
-                            <figure className="_tabFig">
-                              <Image
-                                src={require("../../assets/images/tab-img-1.svg")}
-                                className="img-fluid"
-                              />
-                            </figure>
-                          </Col>
-                          <Col md={6}>
-                            <div className="_content">
-                              <p className="_contCat">Organisation</p>
-                              <h2 className="_title">John Doe</h2>
-                              <p>
-                                Jane is a customer support team leader. Jane’s
-                                responsibilities are overseeing technical
-                                systems, handling employee relations, ensuring
-                                compliance with regulations, managing staff
-                                engagement, assessing staff needs, hiring and
-                                developing each team member to the best
-                                potential.{" "}
-                              </p>
-                              <p>
-                                <strong>Jane always feels tired</strong> and
-                                confident she could do better if{" "}
-                                <strong>there was a way</strong> to{" "}
-                                <strong>balance her life better</strong>.{" "}
-                              </p>
-                              <a href="#" className="btn _btnCustom-2">
-                                Full Story
-                              </a>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Tab.Pane>
-                    {/* Tab Pane : Begin  */}
-                    <Tab.Pane eventKey="third">
-                      <div className="_paneInner">
-                        <Row className="_paneInner-row">
-                          <Col md={6}>
-                            <figure className="_tabFig">
-                              <Image
-                                src={require("../../assets/images/tab-img-1.svg")}
-                                className="img-fluid"
-                              />
-                            </figure>
-                          </Col>
-                          <Col md={6}>
-                            <div className="_content">
-                              <p className="_contCat">Health Service</p>
-                              <h2 className="_title">John Doe</h2>
-                              <p>
-                                Jane is a customer support team leader. Jane’s
-                                responsibilities are overseeing technical
-                                systems, handling employee relations, ensuring
-                                compliance with regulations, managing staff
-                                engagement, assessing staff needs, hiring and
-                                developing each team member to the best
-                                potential.{" "}
-                              </p>
-                              <p>
-                                <strong>Jane always feels tired</strong> and
-                                confident she could do better if{" "}
-                                <strong>there was a way</strong> to{" "}
-                                <strong>balance her life better</strong>.{" "}
-                              </p>
-                              <a href="#" className="btn _btnCustom-2">
-                                Full Story
-                              </a>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Tab.Pane>
-                    {/* Tab Pane : Begin  */}
-                    <Tab.Pane eventKey="forth">
-                      <div className="_paneInner">
-                        <Row className="_paneInner-row">
-                          <Col md={6}>
-                            <figure className="_tabFig">
-                              <Image
-                                src={require("../../assets/images/tab-img-1.svg")}
-                                className="img-fluid"
-                              />
-                            </figure>
-                          </Col>
-                          <Col md={6}>
-                            <div className="_content">
-                              <p className="_contCat">HR</p>
-                              <h2 className="_title">John Doe</h2>
-                              <p>
-                                Jane is a customer support team leader. Jane’s
-                                responsibilities are overseeing technical
-                                systems, handling employee relations, ensuring
-                                compliance with regulations, managing staff
-                                engagement, assessing staff needs, hiring and
-                                developing each team member to the best
-                                potential.{" "}
-                              </p>
-                              <p>
-                                <strong>Jane always feels tired</strong> and
-                                confident she could do better if{" "}
-                                <strong>there was a way</strong> to{" "}
-                                <strong>balance her life better</strong>.{" "}
-                              </p>
-                              <a href="#" className="btn _btnCustom-2">
-                                Full Story
-                              </a>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Tab.Pane>
-                    {/* Tab Pane : Begin  */}
-                    <Tab.Pane eventKey="fifth">
-                      <div className="_paneInner">
-                        <Row className="_paneInner-row">
-                          <Col md={6}>
-                            <figure className="_tabFig">
-                              <Image
-                                src={require("../../assets/images/tab-img-1.svg")}
-                                className="img-fluid"
-                              />
-                            </figure>
-                          </Col>
-                          <Col md={6}>
-                            <div className="_content">
-                              <p className="_contCat">Insurance</p>
-                              <h2 className="_title">John Doe</h2>
-                              <p>
-                                Jane is a customer support team leader. Jane’s
-                                responsibilities are overseeing technical
-                                systems, handling employee relations, ensuring
-                                compliance with regulations, managing staff
-                                engagement, assessing staff needs, hiring and
-                                developing each team member to the best
-                                potential.{" "}
-                              </p>
-                              <p>
-                                <strong>Jane always feels tired</strong> and
-                                confident she could do better if{" "}
-                                <strong>there was a way</strong> to{" "}
-                                <strong>balance her life better</strong>.{" "}
-                              </p>
-                              <a href="#" className="btn _btnCustom-2">
-                                Full Story
-                              </a>
-                            </div>
-                          </Col>
-                        </Row>
-                      </div>
-                    </Tab.Pane>
-                  </Tab.Content>
-                </div>
-              </Col>
-            </Row>
-          </Tab.Container>
-        </Container>
-      </div>
+      <EmployeeStory empStoryData={data[4]} />
 
       {/***** Helth Management Section : Begin ********/}
       <div className="_helthM-cont _deepBlue-bg _c-padding">
@@ -619,7 +300,7 @@ function HomePage() {
               </Col>
               <Col xs={12} md={12} lg={8} className="_testColLeft">
                 <div className="_testOutter">
-                  <OwlCarousel  {...options} className="owl-theme" margin={25}>
+                  <OwlCarousel {...owlCarouselOptions} className="owl-theme">
                     <div className="_testDiv">
                       <div className="_testCont">
                         <p>

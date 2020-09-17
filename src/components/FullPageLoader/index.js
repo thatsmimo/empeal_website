@@ -5,7 +5,7 @@ import { Assets } from "../../Common";
 const defaultOptions = {
   loop: true,
   autoplay: true,
-  animationData: Assets.others.heart_anim,
+  animationData: Assets.others.anim_loading,
   rendererSettings: {
     preserveAspectRatio: "xMidYMid slice",
   },

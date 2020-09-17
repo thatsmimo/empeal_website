@@ -56,7 +56,7 @@ const Assets = {
     improvmantIcon: require("../assets/images/cont-improvment-icon.png"),
   },
   others: {
-    heart_anim: require("../assets/heart_anim.json"),
+    anim_loading: require("../assets/anim_loading.json"),
   },
 };
 
