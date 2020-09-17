@@ -26,7 +26,7 @@ function Product() {
       await Api.get("product_description"),
       await Api.get("product_features"),
     ]);
-    console.log("Product: ", allPromise);
+    // console.log("Product: ", allPromise);
     setData(allPromise);
     setLoading(false);
   };
@@ -213,25 +213,24 @@ function Product() {
           <Container>
             <div className="_accordianContainer">
               <Accordion defaultActiveKey="0">
-                <Row className="_acCard-row">                  
-                    {data[2].result.map((element, index) => (
-                      <Col md={12} lg={6} className="_acCard-col">
-                        <Card key={index}>
-                          <Accordion.Toggle
-                            as={Card.Header}
-                            eventKey={index + ""}
-                          >
-                            <p className="_title-3">{element.title}</p>
-                          </Accordion.Toggle>
-                          <Accordion.Collapse eventKey={index + ""}>
-                            <Card.Body>
-                              {element.body[0].children[0].text}
-                            </Card.Body>
-                          </Accordion.Collapse>
-                        </Card>
-                      </Col>
-                    ))}
-                  
+                <Row className="_acCard-row">
+                  {data[2].result.map((element, index) => (
+                    <Col md={12} lg={6} className="_acCard-col">
+                      <Card key={index}>
+                        <Accordion.Toggle
+                          as={Card.Header}
+                          eventKey={index + ""}
+                        >
+                          <p className="_title-3">{element.title}</p>
+                        </Accordion.Toggle>
+                        <Accordion.Collapse eventKey={index + ""}>
+                          <Card.Body>
+                            {element.body[0].children[0].text}
+                          </Card.Body>
+                        </Accordion.Collapse>
+                      </Card>
+                    </Col>
+                  ))}
                 </Row>
               </Accordion>
             </div>

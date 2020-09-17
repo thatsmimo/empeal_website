@@ -20,7 +20,7 @@ function Pricing() {
       await Api.get("pricing_plans"),
       await Api.get("price"),
     ]);
-    console.log("Pricing: ", allPromise);
+    // console.log("Pricing: ", allPromise);
     setData(allPromise);
     setLoading(false);
   };

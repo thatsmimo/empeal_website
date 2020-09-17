@@ -42,8 +42,35 @@ const owlCarouselOptions = {
   },
 };
 
+var months = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
+const dateConverter = (orgDate) => {
+  const date = new Date(orgDate);
+  return (
+    date.getUTCDate() +
+    " " +
+    months[date.getUTCMonth()] +
+    ", " +
+    date.getUTCFullYear()
+  );
+};
+
 export {
   homeTellUsAboutCardItemsArr,
   homeTellUsAboutRadioItemsArr,
   owlCarouselOptions,
+  dateConverter,
 };
