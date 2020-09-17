@@ -54,6 +54,8 @@ const Assets = {
     personalisationIcon: require("../assets/images/personalisation.png"),
     gamificationIcon: require("../assets/images/gamification.png"),
     improvmantIcon: require("../assets/images/cont-improvment-icon.png"),
+    blogDetailsImg: require("../assets/images/blog-details-img-1.jpg"),
+    calenderIcon: require("../assets/images/calendar.png")
   },
   others: {
     heart_anim: require("../assets/heart_anim.json"),
