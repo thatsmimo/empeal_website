@@ -11,10 +11,6 @@ const homeTellUsAboutCardItemsArr = [
     icon: Assets.images.np_employee,
   },
   {
-    name: "HR",
-    icon: Assets.images.np_human_resources,
-  },
-  {
     name: "Insurance",
     icon: Assets.images.np_health_insurance,
   },
@@ -29,4 +25,25 @@ const homeTellUsAboutRadioItemsArr = [
   { name: "Remote Teams" },
 ];
 
-export { homeTellUsAboutCardItemsArr, homeTellUsAboutRadioItemsArr };
+const owlCarouselOptions = {
+  loop: false,
+  nav: false,
+  margin: 25,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1200: {
+      items: 3,
+    },
+  },
+};
+
+export {
+  homeTellUsAboutCardItemsArr,
+  homeTellUsAboutRadioItemsArr,
+  owlCarouselOptions,
+};

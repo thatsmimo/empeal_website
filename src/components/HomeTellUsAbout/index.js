@@ -12,7 +12,6 @@ import {
 
 const HomeTellUsAbout = ({ tellAboutData }) => {
   const [tellAboutPos, setTellAboutPos] = useState(0);
-  //   const [selectedRadioPos,setSelectedRadioPos] =
   const [selectedBoxPos, setSelectedBoxPos] = useState(null);
 
   const ChooseBox = () => (

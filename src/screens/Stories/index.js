@@ -2,8 +2,13 @@ import React from "react";
 import { Container, Row, Col, Image, ProgressBar } from "react-bootstrap";
 import { Assets } from "../../Common";
 import { Header, Footer } from "../../components";
+import { useLocation } from "react-router-dom";
 
 function Stories() {
+  const location = useLocation();
+  const { story } = location.state || false;
+  console.log(JSON.stringify(story));
+
   return (
     <div className="_main">
       {/***** Header : Begin ********/}
@@ -17,18 +22,12 @@ function Stories() {
             <Row className="_aI-center">
               <Col md={12} lg={7} className="">
                 <div className="_titleDiv">
-                  <h2 className="_titleLarge">Meet Jane..</h2>
-                  <p className="_fW-500">
-                    Jane is a customer support team leader. Jane’s
-                    responsibilities are overseeing technical systems, handling
-                    employee relations, ensuring compliance with regulations,
-                    managing staff engagement, assessing staff needs, hiring and
-                    developing each team member to the best potential.{" "}
-                  </p>
-                  <p className="_fW-500">
-                    Jane always feels tired and confident she could do better if
-                    there was a way to balance her life better.{" "}
-                  </p>
+                  <h2 className="_titleLarge">Meet {story?.name}..</h2>
+                  {story?.introduction?.map((element, index) => (
+                    <p className="_fW-500" key={index}>
+                      {element.children[0].text}
+                    </p>
+                  ))}
                 </div>
                 <Row className="_iconInfoDiv-row">
                   <Col md={6} lg={6} className="_iconInfoDiv-col">
@@ -42,10 +41,9 @@ function Stories() {
                       <div className="_listCont">
                         <p className="_title-4">Frustrations</p>
                         <ul className="_list">
-                          <li>- Feeling Tried</li>
-                          <li>- Hypothyroid</li>
-                          <li>- Allergic to Gluten</li>
-                          <li>- Shoulder Pain</li>
+                          {story?.frustrations?.map((element, index) => (
+                            <li key={index}>{element}</li>
+                          ))}
                         </ul>
                       </div>
                     </div>
@@ -61,9 +59,9 @@ function Stories() {
                       <div className="_listCont">
                         <p className="_title-4">Goals</p>
                         <ul className="_list">
-                          <li>- Reduce stress</li>
-                          <li>- Be Healthy</li>
-                          <li>- Increase knowledge</li>
+                          {story?.goals?.map((element, index) => (
+                            <li key={index}>{element}</li>
+                          ))}
                         </ul>
                       </div>
                     </div>
@@ -84,11 +82,11 @@ function Stories() {
                     <Col md={6} lg={6}>
                       <div className="_storyAbout">
                         <ul className="_aboutInfo">
-                          <li>Name: Jane</li>
-                          <li>Age: 28</li>
-                          <li>Work: Sedentary Work</li>
-                          <li>Family: Single</li>
-                          <li>Location: Dublin</li>
+                          <li>Name: {story?.name}</li>
+                          <li>Age: {story?.age}</li>
+                          <li>Work: {story?.work}</li>
+                          <li>Family: {story?.family}</li>
+                          <li>Location: {story?.location}</li>
                         </ul>
                       </div>
                     </Col>
@@ -107,25 +105,25 @@ function Stories() {
                   <Col md={6} lg={4} className="_progCol">
                     <p className="_title-4">Objectives</p>
                     <div className="_progDiv">
-                      <p className="_progTxt">Be Part of the system</p>
+                      <p className="_progTxt">{story?.objectives?.[0]}</p>
                       <div className="_barDiv _pro-org">
                         <ProgressBar now={60} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Recognition</p>
+                      <p className="_progTxt">{story?.objectives?.[1]}</p>
                       <div className="_barDiv _pro-org">
                         <ProgressBar now={60} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Happy in Life</p>
+                      <p className="_progTxt">{story?.objectives?.[2]}</p>
                       <div className="_barDiv _pro-org">
                         <ProgressBar now={100} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Wellbeing</p>
+                      <p className="_progTxt">{story?.objectives?.[3]}</p>
                       <div className="_barDiv _pro-org">
                         <ProgressBar now={90} />
                       </div>
@@ -134,25 +132,25 @@ function Stories() {
                   <Col md={6} lg={4} className="_progCol">
                     <p className="_title-4">Motivations</p>
                     <div className="_progDiv">
-                      <p className="_progTxt">Happiness</p>
+                      <p className="_progTxt">{story?.motivations?.[0]}</p>
                       <div className="_barDiv">
                         <ProgressBar now={90} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Social</p>
+                      <p className="_progTxt">{story?.motivations?.[1]}</p>
                       <div className="_barDiv">
                         <ProgressBar now={80} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Fear</p>
+                      <p className="_progTxt">{story?.motivations?.[2]}</p>
                       <div className="_barDiv">
                         <ProgressBar now={30} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Growth</p>
+                      <p className="_progTxt">{story?.motivations?.[3]}</p>
                       <div className="_barDiv">
                         <ProgressBar now={76} />
                       </div>
@@ -161,25 +159,33 @@ function Stories() {
                   <Col md={6} lg={4} className="_progCol">
                     <p className="_title-4">Preferred Channels</p>
                     <div className="_progDiv">
-                      <p className="_progTxt">Traditional</p>
+                      <p className="_progTxt">
+                        {story?.preffered_channels?.[0]}
+                      </p>
                       <div className="_barDiv _pro-green">
                         <ProgressBar now={75} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Social Media & Work Groups</p>
+                      <p className="_progTxt">
+                        {story?.preffered_channels?.[1]}
+                      </p>
                       <div className="_barDiv _pro-green">
                         <ProgressBar now={80} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Referral</p>
+                      <p className="_progTxt">
+                        {story?.preffered_channels?.[2]}
+                      </p>
                       <div className="_barDiv _pro-green">
                         <ProgressBar now={60} />
                       </div>
                     </div>
                     <div className="_progDiv">
-                      <p className="_progTxt">Better Engagement</p>
+                      <p className="_progTxt">
+                        {story?.preffered_channels?.[3]}
+                      </p>
                       <div className="_barDiv _pro-green">
                         <ProgressBar now={100} />
                       </div>
@@ -196,16 +202,11 @@ function Stories() {
           <Container>
             <Row>
               <Col md={12} lg={12}>
-                <p className="_fW-500">
-                  Jane is frequently unwell. She needs medical treatment and
-                  frequent visit to clinics but thankfully that’s covered
-                  through insurance. However, this causes her to miss work and
-                  results in poor social inclusion, happiness and career growth.
-                </p>
-                <p className="_fW-500">
-                  She has seen a trend of absenteeism in her team as well. She
-                  thinks this could be avoided with proper intervention.
-                </p>
+                {story?.description?.map((element, index) => (
+                  <p className="_fW-500" key={index}>
+                    {element.children[0].text}
+                  </p>
+                ))}
               </Col>
               <Col md={12} lg={12}>
                 <div className="_howItWork">

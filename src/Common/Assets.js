@@ -58,7 +58,7 @@ const Assets = {
     calenderIcon: require("../assets/images/calendar.png")
   },
   others: {
-    heart_anim: require("../assets/heart_anim.json"),
+    anim_loading: require("../assets/anim_loading.json"),
   },
 };
 
