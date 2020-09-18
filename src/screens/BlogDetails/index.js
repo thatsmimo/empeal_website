@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { Assets } from "../../Common";
@@ -8,6 +8,11 @@ import { dateConverter } from "../../utils";
 function BlogDetails() {
   const location = useLocation();
   const { details } = location.state || false;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="_main">
       {/***** Header : Begin ********/}
