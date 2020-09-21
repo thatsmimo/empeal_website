@@ -52,7 +52,7 @@ function HomePage() {
   return (
     <div className="_main _home">
       {/***** Header ********/}
-      <Header isHome={true} />
+      <Header />
 
       {/***** Banner : Begin ********/}
       <div className="_bannerOutter">

@@ -411,7 +411,7 @@ Header Section
 }
 ._home ._hdrUserDiv,
 ._home .navbar-toggler {
-  display: none;
+  /* display: none; */
 }
 /************************* 
 Banner Section
@@ -462,7 +462,7 @@ Banner Section
   position: absolute;
   width: 54%;
   right: -140px;
-  top: -155px;
+  top: -105px;
 }
 ._bannerRight img {
   width: 100%;
@@ -498,9 +498,16 @@ Banner Section
 ._bannerMail-form .form-control {
   height: 45px;
 }
+._bannerMail-form .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
 ._bannerMail-form ._btn {
   height: 45px;
   width: 165px;
+}
+._bannerMail-form ._btn:hover {
+  background-color: #7cab13 !important;
 }
 ._banner-bottom {
   background: url(../src/assets/images/people-2.png) no-repeat 90% 70%;
@@ -1012,6 +1019,7 @@ Blog Section
   margin-bottom: 10px;
   display: block;
   text-transform: capitalize;
+  cursor: pointer;
 }
 ._blogTitle:hover {
   color: #000;
@@ -2184,6 +2192,15 @@ RESPONSIVE
     font-size: 60px;
     line-height: 65px;
   }
+  .navbar-nav ._navList {
+    padding: 0 15px;
+  }
+  ._bannerOutter {
+    background-size: 53%;
+  }
+  ._bannerRight {
+    top: -80px;
+  }
   ._bannerCont ._titleLarge {
     width: 90%;
   }
@@ -2228,6 +2245,9 @@ RESPONSIVE
   }
   ._bannerRigthTextBlock {
     padding-right: 150px;
+  }
+  ._bannerOutter {
+    background-size: 65%;
   }
   ._numCircle {
     height: 100px;
@@ -2364,6 +2384,9 @@ RESPONSIVE
   ._header-main {
     padding: 10px 0;
   }
+  ._bannerOutter {
+    background-size: 70%;
+  }
   ._fLabel {
     margin-bottom: 0;
   }
@@ -2464,7 +2487,7 @@ RESPONSIVE
     width: 90%;
   }
   ._womanImg {
-    right: -140px;
+    right: -110px;
   }
   ._storyFigCont img {
     max-width: 125px;
@@ -2505,6 +2528,11 @@ RESPONSIVE
   ._title-3 {
     font-size: 20px;
     line-height: 25px;
+  }
+  ._home ._header-main {
+    z-index: 999;
+    background-color: #fff;
+    box-shadow: 0 0 10px 8px rgba(0, 0, 0, 0.05);
   }
   ._banner-top {
     min-height: unset;
@@ -2571,6 +2599,9 @@ RESPONSIVE
     font-size: 20px;
     padding: 15px;
     border-bottom: 1px dashed #ffffff6e;
+  }
+  ._bannerOutter {
+    background-size: 46%;
   }
   ._bannerCont ._titleLarge {
     font-size: 45px;
@@ -2888,6 +2919,7 @@ RESPONSIVE
   }
   ._abtBlock ._awIcon ~ ._titleDiv {
     padding-left: 0;
+    margin-bottom: 15px;
   }
   ._compAwards .row > div {
     flex: 0 0 50%;
@@ -3035,6 +3067,10 @@ RESPONSIVE
   ._blogD-bdy p {
     font-size: 16px;
     line-height: 28px;
+  }
+  ._blogTitle {
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 
