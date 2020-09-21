@@ -21,7 +21,7 @@ const Header = ({ isHome = false }) => {
     <div className="_header-main">
       <Container-fluid>
         {/* Navbar Begin */}
-        <Navbar collapseOnSelect expand="lg" bg="" variant="">
+        <Navbar collapseOnSelect expand="md" bg="" variant="">
           <Navbar.Brand href="/home">
             {/* Logo */}
             <div className="_logo">
